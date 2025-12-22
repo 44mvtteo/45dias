@@ -2,11 +2,12 @@ body {
   margin: 0;
   font-family: 'Playfair Display', serif;
   background: linear-gradient(180deg,#fce4ec,#e1bee7,#e3f2fd);
-  color: #333;
+  color: #222;
 }
 
 .oculto { display: none; }
 
+/* PASSWORD */
 .pantalla-password {
   height: 100vh;
   display: flex;
@@ -17,49 +18,111 @@ body {
 .password-box {
   background: white;
   padding: 40px;
-  border-radius: 16px;
+  border-radius: 20px;
   text-align: center;
+  width: 90%;
+  max-width: 320px;
+}
+
+/* PORTADA */
+.portada {
+  text-align: center;
+  padding: 50px 20px;
 }
 
 .titulo {
-  text-align: center;
-  margin-top: 30px;
+  font-size: 2.4em;
 }
 
 .bloque-carta {
   background: white;
+  margin: 30px auto;
+  padding: 20px;
   width: 260px;
-  margin: 20px auto;
-  padding: 20px;
-  border-radius: 14px;
-  text-align: center;
+  border-radius: 16px;
+  cursor: pointer;
 }
 
+/* CANCIÓN */
 .cancion-dia {
+  max-width: 420px;
+  margin: auto;
   background: white;
-  margin: 30px auto;
   padding: 20px;
-  width: 320px;
-  border-radius: 14px;
+  border-radius: 16px;
   text-align: center;
 }
 
+/* SELECTOR */
+.selector-cartas {
+  text-align: center;
+  margin: 20px;
+}
+
+/* CARTA */
 .carta {
+  max-width: 520px;
+  margin: auto;
   background: white;
-  width: 80%;
-  max-width: 500px;
-  margin: 30px auto;
-  padding: 30px;
-  border-radius: 14px;
+  padding: 40px;
+  border-radius: 18px;
+}
+
+/* GALERÍA */
+.galeria {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 40px 20px;
+}
+
+.bloque {
+  text-align: center;
 }
 
 .carrusel {
   display: flex;
+  align-items: center;
   justify-content: center;
-  gap: 20px;
+  gap: 15px;
 }
 
 .carrusel img {
   width: 260px;
-  border-radius: 14px;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 18px;
+}
+
+.carrusel button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background: white;
+  font-size: 1.4em;
+}
+
+/* VIDEO */
+video {
+  width: 100%;
+  border-radius: 16px;
+  margin-top: 10px;
+}
+
+.contador-final {
+  margin-top: 15px;
+  background: #300;
+  color: red;
+  font-family: monospace;
+  padding: 10px;
+  border-radius: 12px;
+}
+
+/* RESPONSIVE */
+@media (min-width: 768px) {
+  .galeria {
+    flex-direction: row;
+    justify-content: center;
+  }
 }
