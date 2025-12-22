@@ -54,10 +54,16 @@ function actualizarCarta(){
   actualizarContadorFinal();
 }
 
-function abrirCarta(dia){
-  seccionCarta.classList.remove("oculto");
-  contenidoCarta.innerText = cartas[dia];
+function abrirCarta(dia) {
+  const sobre = document.getElementById("bloqueCarta");
+  sobre.classList.add("abierto");
+
+  setTimeout(() => {
+    document.getElementById("seccionCarta").classList.remove("oculto");
+    document.getElementById("contenidoCarta").innerText = cartas[dia];
+  }, 600);
 }
+
 
 /* SELECTOR */
 function construirSelector(){
@@ -98,3 +104,4 @@ function actualizarContadorFinal(){
 function mostrarFoto(){ imagenCarrusel.src=fotos[indice]; }
 function siguiente(){ indice=(indice+1)%fotos.length; mostrarFoto(); }
 function anterior(){ indice=(indice-1+fotos.length)%fotos.length; mostrarFoto(); }
+
