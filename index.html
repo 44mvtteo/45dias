@@ -36,7 +36,7 @@
   </div>
 
   <!-- PORTADA -->
-  <section class="portada">
+  <section class="bloque">
     <h1 class="titulo">45 días con usted 🩷</h1>
 
     <div id="bloqueCarta" class="bloque-carta">
@@ -46,7 +46,7 @@
   </section>
 
   <!-- CANCIÓN -->
-  <section class="cancion-dia">
+  <section class="bloque cancion-dia">
     <p class="label">🎵 Canción del día</p>
     <h3 id="tituloCancion">Canción del día</h3>
     <p id="artistaCancion">Artista</p>
@@ -54,35 +54,32 @@
   </section>
 
   <!-- SELECTOR -->
-  <div class="selector-cartas">
+  <section class="bloque">
     <select id="listaCartas"></select>
-  </div>
+  </section>
 
   <!-- CARTA -->
-  <section id="seccionCarta" class="carta-seccion oculto">
+  <section id="seccionCarta" class="bloque oculto">
     <div class="carta">
       <p id="contenidoCarta"></p>
     </div>
   </section>
 
-  <!-- GALERÍA + VIDEO -->
-  <section class="galeria-doble">
-
-    <div class="bloque-fotos">
-      <h2 class="titulo-galeria">Nuestros momentos ✨</h2>
-      <div class="carrusel">
-        <button class="flecha" onclick="anterior()">‹</button>
-        <img id="imagenCarrusel" alt="Nuestros momentos">
-        <button class="flecha" onclick="siguiente()">›</button>
-      </div>
+  <!-- GALERÍA -->
+  <section class="bloque">
+    <h2>Nuestros momentos ✨</h2>
+    <div class="carrusel">
+      <button onclick="anterior()">‹</button>
+      <img id="imagenCarrusel">
+      <button onclick="siguiente()">›</button>
     </div>
+  </section>
 
-    <div class="bloque-video">
-      <h2 class="titulo-galeria">Mensaje del día 💌</h2>
-      <p class="texto-video" id="textoVideo">Hoy quería decirle…</p>
-      <video id="videoDiario" controls playsinline></video>
-    </div>
-
+  <!-- VIDEO -->
+  <section class="bloque">
+    <h2>Mensaje del día 💌</h2>
+    <p id="textoVideo">Hoy quería decirle…</p>
+    <video id="videoDiario" controls playsinline></video>
   </section>
 
 </div>
