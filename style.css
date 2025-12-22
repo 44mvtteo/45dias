@@ -58,6 +58,13 @@ body {
   width: 2px;
   height: 100%;
   background: #e57373;
+
+    .carta p {
+  white-space: pre-line;
+  position: relative;
+  z-index: 2;
+}
+
 }
 
 }
@@ -267,6 +274,7 @@ video {
 .bloque-carta.abierto::before {
   transform: rotateX(180deg);
 }
+
 
 
 
