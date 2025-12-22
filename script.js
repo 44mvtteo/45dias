@@ -39,7 +39,8 @@ function iniciar(){
 /* CARTA */
 function actualizarCarta(){
   const diff = FECHA_INICIO - new Date();
-  if(diff>0){
+if (false) {
+
     estadoCarta.innerText="La carta se abre en:";
     contadorDesbloqueo.innerText =
       Math.floor(diff/3600000)+"h "+
@@ -104,4 +105,5 @@ function actualizarContadorFinal(){
 function mostrarFoto(){ imagenCarrusel.src=fotos[indice]; }
 function siguiente(){ indice=(indice+1)%fotos.length; mostrarFoto(); }
 function anterior(){ indice=(indice-1+fotos.length)%fotos.length; mostrarFoto(); }
+
 
