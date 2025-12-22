@@ -1,12 +1,11 @@
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f7f7f7;
+  font-family: 'Playfair Display', serif;
+  background: linear-gradient(180deg, #fce4ec, #e1bee7, #e3f2fd);
+  color: #333;
 }
 
-.oculto {
-  display: none;
-}
+.oculto { display: none; }
 
 /* PASSWORD */
 .pantalla-password {
@@ -18,25 +17,100 @@ body {
 
 .password-box {
   background: white;
-  padding: 30px;
-  border-radius: 10px;
+  padding: 40px;
+  border-radius: 18px;
   text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
 /* CONTENIDO */
 .contenido {
-  padding: 20px;
-  max-width: 500px;
-  margin: auto;
-}
-
-.titulo {
+  padding: 30px 15px;
   text-align: center;
 }
 
-.bloque {
+/* TITULO */
+.titulo {
+  font-size: 2.4em;
+  margin-bottom: 20px;
+}
+
+/* BLOQUE CARTA */
+.bloque-carta {
   background: white;
+  max-width: 280px;
+  margin: 0 auto 30px;
   padding: 20px;
-  margin: 20px 0;
-  border-radius: 10px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* CANCIÓN */
+.cancion-dia {
+  background: white;
+  max-width: 320px;
+  margin: 30px auto;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+/* CARTA */
+.carta {
+  background: white;
+  max-width: 520px;
+  margin: 30px auto;
+  padding: 35px;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  white-space: pre-line;
+}
+
+/* GALERIA */
+.galeria {
+  margin: 50px 0;
+}
+
+.carrusel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.carrusel img {
+  width: 260px;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+.carrusel button {
+  border: none;
+  background: white;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+/* VIDEO */
+.video video {
+  width: 100%;
+  max-width: 320px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+/* CONTADOR FINAL */
+.contador-final {
+  background: #1b1b1b;
+  color: #ff5252;
+  max-width: 320px;
+  margin: 40px auto;
+  padding: 20px;
+  border-radius: 15px;
+  font-family: monospace;
+  font-size: 1.2em;
 }
