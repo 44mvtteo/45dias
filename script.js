@@ -40,17 +40,15 @@ function iniciar(){
 function actualizarCarta(){
   const diff = FECHA_INICIO - new Date();
 if (false) {
+  estadoCarta.innerText = "La carta se abre en:";
+  contadorDesbloqueo.innerText = "...";
+  bloqueCarta.onclick = null;
+} else {
+  estadoCarta.innerText = "Presione para leer la carta 💌";
+  contadorDesbloqueo.innerText = "";
+  bloqueCarta.onclick = () => abrirCarta(0);
+}
 
-    estadoCarta.innerText="La carta se abre en:";
-    contadorDesbloqueo.innerText =
-      Math.floor(diff/3600000)+"h "+
-      Math.floor(diff%3600000/60000)+"m";
-    bloqueCarta.onclick=null;
-  } else {
-    estadoCarta.innerText="Presione para leer la carta 💌";
-    contadorDesbloqueo.innerText="";
-    bloqueCarta.onclick=()=>abrirCarta(0);
-  }
 
   actualizarContadorFinal();
 }
@@ -105,5 +103,6 @@ function actualizarContadorFinal(){
 function mostrarFoto(){ imagenCarrusel.src=fotos[indice]; }
 function siguiente(){ indice=(indice+1)%fotos.length; mostrarFoto(); }
 function anterior(){ indice=(indice-1+fotos.length)%fotos.length; mostrarFoto(); }
+
 
 
