@@ -154,3 +154,25 @@ video {
     max-width: 340px;
   }
 }
+/* ===============================
+   AJUSTE SOBRE – MOBILE
+=================================*/
+
+@media (max-width: 430px) {
+
+  .bloque-carta {
+    padding-top: 55px; /* da aire al texto */
+  }
+
+  .solapa {
+    height: 40px;            /* antes era 60% */
+    top: -25px;              /* sube la solapa */
+    clip-path: polygon(0 100%, 50% 0, 100% 100%);
+  }
+
+  .bloque-carta.abierto .solapa {
+    transform: rotateX(180deg) translateY(-10px);
+  }
+
+}
+
