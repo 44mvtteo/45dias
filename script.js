@@ -7,16 +7,14 @@ const cartas = Array.from({length:45},(_,i)=>`Carta ${i+1}\n\nAquí escribes la 
 const canciones = Array.from({length:45},()=>({
   titulo:"Te Amo",
   artista:"Franco De Vita",
-  link:"https://open.spotify.com/track/1yMciM"
+  link:"https://open.spotify.com"
 }));
-
 const mensajesVideo = Array.from({length:45},()=> "Hoy quería decirle…");
 
 const fotos = [];
 for(let i=1;i<=50;i++) fotos.push(`imagenes/foto${i}.jpg`);
 let indice = 0;
 
-/* PASSWORD */
 function verificarPassword(){
   if(inputPassword.value !== PASSWORD){
     errorPassword.innerText = "Contraseña incorrecta";
@@ -27,7 +25,6 @@ function verificarPassword(){
   iniciar();
 }
 
-/* INICIO */
 function iniciar(){
   actualizarCarta();
   construirSelector();
@@ -36,39 +33,35 @@ function iniciar(){
   setInterval(actualizarCarta,1000);
 }
 
-/* CARTA */
 function actualizarCarta(){
   const diff = FECHA_INICIO - new Date();
-if (false) {
-  estadoCarta.innerText = "La carta se abre en:";
-  contadorDesbloqueo.innerText = "...";
-  bloqueCarta.onclick = null;
-} else {
-  estadoCarta.innerText = "Presione para leer la carta 💌";
-  contadorDesbloqueo.innerText = "";
-  bloqueCarta.onclick = () => abrirCarta(0);
-}
-
-
+  if(diff > 0){
+    estadoCarta.innerText = "La carta se abre en:";
+    contadorDesbloqueo.innerText =
+      Math.floor(diff/3600000)+"h "+
+      Math.floor(diff%3600000/60000)+"m";
+    bloqueCarta.onclick = null;
+  } else {
+    estadoCarta.innerText = "Presione para leer la carta 💌";
+    contadorDesbloqueo.innerText = "";
+    bloqueCarta.onclick = ()=>abrirCarta(0);
+  }
   actualizarContadorFinal();
 }
 
-function abrirCarta(dia) {
-  const sobre = document.getElementById("bloqueCarta");
-  sobre.classList.add("abierto");
-
-  setTimeout(() => {
-    document.getElementById("seccionCarta").classList.remove("oculto");
-    document.getElementById("contenidoCarta").innerText = cartas[dia];
-  }, 600);
+function abrirCarta(dia){
+  bloqueCarta.classList.add("abierto");
+  setTimeout(()=>{
+    seccionCarta.classList.remove("oculto");
+    contenidoCarta.innerText = cartas[dia];
+  },600);
 }
 
-
-/* SELECTOR */
 function construirSelector(){
   listaCartas.innerHTML="";
   for(let i=0;i<45;i++){
-    const f=new Date(FECHA_INICIO); f.setDate(f.getDate()+i);
+    const f=new Date(FECHA_INICIO);
+    f.setDate(f.getDate()+i);
     const opt=document.createElement("option");
     opt.value=i;
     opt.text=new Date()>=f?`Carta ${i+1}`:`🔒 Carta ${i+1}`;
@@ -78,17 +71,14 @@ function construirSelector(){
   listaCartas.onchange=()=>abrirCarta(listaCartas.value);
 }
 
-/* CONTENIDO */
 function cargarContenido(){
-  const dia=Math.max(0,Math.floor((new Date()-FECHA_INICIO)/86400000));
-  tituloCancion.innerText=canciones[dia].titulo;
-  artistaCancion.innerText=canciones[dia].artista;
-  linkCancion.href=canciones[dia].link;
-  textoVideo.innerText=mensajesVideo[dia];
-  videoDiario.src=`videos/video${dia+1}.mp4`;
+  tituloCancion.innerText=canciones[0].titulo;
+  artistaCancion.innerText=canciones[0].artista;
+  linkCancion.href=canciones[0].link;
+  textoVideo.innerText=mensajesVideo[0];
+  videoDiario.src=`videos/video1.mp4`;
 }
 
-/* CONTADOR FINAL */
 function actualizarContadorFinal(){
   const d=FECHA_ENCUENTRO-new Date();
   const s=Math.floor(d/1000);
@@ -99,10 +89,6 @@ function actualizarContadorFinal(){
     s%60+"s";
 }
 
-/* CARRUSEL */
 function mostrarFoto(){ imagenCarrusel.src=fotos[indice]; }
 function siguiente(){ indice=(indice+1)%fotos.length; mostrarFoto(); }
 function anterior(){ indice=(indice-1+fotos.length)%fotos.length; mostrarFoto(); }
-
-
-
