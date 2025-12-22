@@ -1,46 +1,40 @@
 const PASSWORD = "1308";
 
-// Fechas
 const FECHA_INICIO = new Date("2026-01-09T09:00:00-03:00");
 const FECHA_ENCUENTRO = new Date("2026-02-22T00:00:00-03:00");
 
-// Cartas
 const cartas = Array.from({ length: 45 }, (_, i) =>
   `Carta ${i + 1}\n\nAquí escribes la carta del día.`
 );
 
-// Canciones
 const canciones = Array.from({ length: 45 }, () => ({
   titulo: "Canción del día",
   artista: "Artista",
   link: "https://open.spotify.com/"
 }));
 
-// Mensajes video
 const mensajesVideo = Array.from({ length: 45 }, () =>
   "Hoy quería decirle…"
 );
 
-// Fotos
 const fotos = [];
-for (let i = 1; i <= 50; i++) {
-  fotos.push(`imagenes/foto${i}.jpg`);
-}
+for (let i = 1; i <= 50; i++) fotos.push(`imagenes/foto${i}.jpg`);
 let indice = 0;
+
+const mensajesEspeciales = {
+  "2026-01-13": "Hoy no es solo una carta… es un día especial 🤍",
+  "2026-02-13": "Falta poco… y mi corazón ya está contigo 💌",
+  "2026-02-14": "Feliz día del amor. Siempre usted 💖"
+};
 
 /* PASSWORD */
 function verificarPassword() {
-  const input = document.getElementById("inputPassword");
-  const error = document.getElementById("errorPassword");
-
-  if (input.value !== PASSWORD) {
-    error.innerText = "Contraseña incorrecta";
+  if (inputPassword.value !== PASSWORD) {
+    errorPassword.innerText = "Contraseña incorrecta";
     return;
   }
-
-  document.getElementById("pantallaPassword").style.display = "none";
-  document.getElementById("contenidoPrincipal").classList.remove("oculto");
-
+  pantallaPassword.style.display = "none";
+  contenidoPrincipal.classList.remove("oculto");
   iniciar();
 }
 
@@ -49,107 +43,96 @@ function iniciar() {
   actualizarEncuentro();
   actualizarEstadoCarta();
   construirSelector();
-  cargarCancionDelDia();
-  cargarVideoDelDia();
+  cargarCancion();
+  cargarVideo();
   mostrarFoto();
-
+  mensajeEspecial();
+  modoNoche();
   setInterval(actualizarEncuentro, 60000);
   setInterval(actualizarEstadoCarta, 60000);
 }
 
-/* CONTADOR ENCUENTRO */
+/* CONTADORES */
 function actualizarEncuentro() {
-  const diff = FECHA_ENCUENTRO - new Date();
-  const dias = Math.max(0, Math.floor(diff / 86400000));
-  document.getElementById("contadorEncuentroIzq").innerText = dias;
-  document.getElementById("contadorEncuentroDer").innerText = dias;
+  const dias = Math.max(0, Math.floor((FECHA_ENCUENTRO - new Date()) / 86400000));
+  contadorEncuentroIzq.innerText = dias;
+  contadorEncuentroDer.innerText = dias;
 }
 
-/* BOTÓN PRINCIPAL */
+/* BOTÓN CARTA */
 function actualizarEstadoCarta() {
-  const ahora = new Date();
-  const diff = FECHA_INICIO - ahora;
-
-  const estado = document.getElementById("estadoCarta");
-  const contador = document.getElementById("contadorDesbloqueo");
-  const boton = document.getElementById("bloqueCarta");
-
+  const diff = FECHA_INICIO - new Date();
   if (diff > 0) {
-    estado.innerText = "La carta se abre en:";
-    contador.innerText =
-      Math.floor(diff / 3600000) + "h " +
-      Math.floor((diff % 3600000) / 60000) + "m";
-    boton.onclick = null;
-    return;
+    estadoCarta.innerText = "La carta se abre en:";
+    contadorDesbloqueo.innerText = `${Math.floor(diff / 3600000)}h`;
+    bloqueCarta.onclick = null;
+  } else {
+    estadoCarta.innerText = "Presione para leer la carta 💌";
+    contadorDesbloqueo.innerText = "";
+    bloqueCarta.onclick = () => abrirCarta(0);
   }
-
-  estado.innerText = "Presione para leer la carta 💌";
-  contador.innerText = "";
-  boton.onclick = () => abrirCarta(0);
 }
 
 /* SELECTOR */
 function construirSelector() {
-  const lista = document.getElementById("listaCartas");
-  lista.innerHTML = "";
-
-  const hoy = new Date();
-
+  listaCartas.innerHTML = "";
   for (let i = 0; i < 45; i++) {
     const f = new Date(FECHA_INICIO);
     f.setDate(FECHA_INICIO.getDate() + i);
-
     const opt = document.createElement("option");
+    opt.text = new Date() >= f ? `Carta ${i + 1}` : `🔒 Carta ${i + 1}`;
+    opt.disabled = new Date() < f;
     opt.value = i;
-    opt.text = hoy >= f ? `Carta ${i + 1}` : `🔒 Carta ${i + 1}`;
-    opt.disabled = hoy < f;
-
-    lista.appendChild(opt);
+    listaCartas.appendChild(opt);
   }
-
-  lista.onchange = () => abrirCarta(lista.value);
+  listaCartas.onchange = () => abrirCarta(listaCartas.value);
 }
 
-/* ABRIR CARTA */
+/* CARTA */
 function abrirCarta(dia) {
-  document.getElementById("seccionCarta").classList.remove("oculto");
-  document.getElementById("contenidoCarta").innerText = cartas[dia];
+  seccionCarta.classList.remove("oculto");
+  contenidoCarta.innerText = cartas[dia];
+  document.querySelector(".sobre").classList.add("abierta");
 }
 
 /* CANCIÓN */
-function cargarCancionDelDia() {
-  const dia = Math.max(
-    0,
-    Math.floor((new Date() - FECHA_INICIO) / 86400000)
-  );
-
-  document.getElementById("tituloCancion").innerText = canciones[dia].titulo;
-  document.getElementById("artistaCancion").innerText = canciones[dia].artista;
-  document.getElementById("linkCancion").href = canciones[dia].link;
+function cargarCancion() {
+  const d = Math.max(0, Math.floor((new Date() - FECHA_INICIO) / 86400000));
+  tituloCancion.innerText = canciones[d].titulo;
+  artistaCancion.innerText = canciones[d].artista;
+  linkCancion.href = canciones[d].link;
 }
 
 /* VIDEO */
-function cargarVideoDelDia() {
-  const dia = Math.max(
-    0,
-    Math.floor((new Date() - FECHA_INICIO) / 86400000)
-  );
+function cargarVideo() {
+  const d = Math.max(0, Math.floor((new Date() - FECHA_INICIO) / 86400000));
+  videoDiario.src = `videos/video${d + 1}.mp4`;
+  textoVideo.innerText = mensajesVideo[d];
+}
 
-  document.getElementById("videoDiario").src = `videos/video${dia + 1}.mp4`;
-  document.getElementById("textoVideo").innerText = mensajesVideo[dia];
+/* MENSAJE ESPECIAL */
+function mensajeEspecial() {
+  const hoy = new Date().toISOString().split("T")[0];
+  if (mensajesEspeciales[hoy]) {
+    mensajeEspecial.classList.remove("oculto");
+    textoMensajeEspecial.innerText = mensajesEspeciales[hoy];
+  }
+}
+
+/* MODO NOCHE */
+function modoNoche() {
+  const h = new Date().getHours();
+  if (h >= 21 || h <= 7) document.body.classList.add("noche");
 }
 
 /* CARRUSEL */
-function mostrarFoto() {
-  document.getElementById("imagenCarrusel").src = fotos[indice];
-}
+function mostrarFoto() { imagenCarrusel.src = fotos[indice]; }
+function siguiente() { indice = (indice + 1) % fotos.length; mostrarFoto(); }
+function anterior() { indice = (indice - 1 + fotos.length) % fotos.length; mostrarFoto(); }
 
-function siguiente() {
-  indice = (indice + 1) % fotos.length;
-  mostrarFoto();
-}
-
-function anterior() {
-  indice = (indice - 1 + fotos.length) % fotos.length;
-  mostrarFoto();
-}
+/* MENSAJE SECRETO */
+let clicks = 0;
+tituloSecreto.onclick = () => {
+  clicks++;
+  if (clicks === 5) alert("Siempre usted 🤍");
+};
