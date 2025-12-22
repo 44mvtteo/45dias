@@ -3,11 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>45 días con usted 💖</title>
+<title>45 días con usted 💗</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="estilo.css">
-
 </head>
 
 <body>
@@ -15,7 +14,7 @@
 <!-- PASSWORD -->
 <div id="pantallaPassword" class="pantalla-password">
   <div class="password-box">
-    <h1>45 días con usted 💖</h1>
+    <h1>45 días con usted 💗</h1>
     <input type="password" id="inputPassword" placeholder="Contraseña">
     <button onclick="verificarPassword()">Entrar</button>
     <p id="errorPassword"></p>
@@ -25,30 +24,34 @@
 <!-- CONTENIDO -->
 <div id="contenidoPrincipal" class="contenido oculto">
 
-  <!-- TÍTULO -->
-  <h1 class="titulo">45 días con usted 💖</h1>
+  <h1 class="titulo-principal">45 días con usted 💗</h1>
 
-  <!-- CONTADOR CARTA -->
-  <div class="bloque-carta" id="bloqueCarta">
+  <!-- CARTA PRINCIPAL -->
+  <div id="bloqueCarta" class="bloque-carta">
     <p id="estadoCarta">Cargando…</p>
     <span id="contadorDesbloqueo"></span>
   </div>
 
   <!-- CANCIÓN -->
-  <section class="cancion-dia">
+  <section class="tarjeta">
     <p class="label">🎵 Canción del día</p>
-    <h3 id="tituloCancion">Te Amo</h3>
-    <p id="artistaCancion">Franco De Vita</p>
+    <img id="coverSpotify" class="cover">
+    <h3 id="tituloCancion"></h3>
+    <p id="artistaCancion"></p>
     <a id="linkCancion" target="_blank">Abrir en Spotify</a>
   </section>
 
   <!-- CARTA -->
-  <section id="seccionCarta" class="carta oculto">
-    <p id="contenidoCarta"></p>
+  <section id="seccionCarta" class="tarjeta oculto">
+    <div class="sobre">
+      <div class="carta">
+        <p id="contenidoCarta"></p>
+      </div>
+    </div>
   </section>
 
   <!-- GALERÍA -->
-  <section class="galeria">
+  <section class="tarjeta">
     <h2>Nuestros momentos ✨</h2>
     <div class="carrusel">
       <button onclick="anterior()">‹</button>
@@ -58,15 +61,15 @@
   </section>
 
   <!-- VIDEO -->
-  <section class="video">
+  <section class="tarjeta">
     <h2>Mensaje del día 💌</h2>
+    <p id="textoVideo"></p>
     <video id="videoDiario" controls playsinline></video>
-    <p id="textoVideo">Hoy quería decirle…</p>
   </section>
 
-  <!-- CONTADOR ENCUENTRO -->
-  <section class="contador-final">
-    <h3>⏳ Cuenta regresiva para vernos</h3>
+  <!-- CONTADOR -->
+  <section class="tarjeta reloj">
+    ⏳ Cuenta regresiva para vernos  
     <div id="contadorEncuentro"></div>
   </section>
 
@@ -75,4 +78,3 @@
 <script src="script.js"></script>
 </body>
 </html>
-
