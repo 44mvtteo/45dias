@@ -10,8 +10,8 @@ const cartas = Array.from({ length: 45 }, (_, i) =>
 
 /* CANCIONES */
 const canciones = Array.from({ length: 45 }, () => ({
-  titulo: "Cuando no era cantante",
-  artista: "bogueto",
+  titulo: "Canción del día",
+  artista: "Artista",
   link: "https://open.spotify.com/"
 }));
 
@@ -136,4 +136,5 @@ function anterior() {
   indice = (indice - 1 + fotos.length) % fotos.length;
   mostrarFoto();
 }
+
 
