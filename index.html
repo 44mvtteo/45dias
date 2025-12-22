@@ -23,20 +23,17 @@
 <!-- CONTENIDO -->
 <div id="contenidoPrincipal" class="contenido oculto">
 
-  <!-- CONTADORES LATERALES -->
+  <!-- CONTADORES -->
   <div class="contador-lateral izquierda">
-    Nos vemos en<br>
-    <span id="contadorEncuentroIzq">--</span> días
+    Nos vemos en<br><span id="contadorEncuentroIzq">--</span> días
   </div>
-
   <div class="contador-lateral derecha">
-    Nos vemos en<br>
-    <span id="contadorEncuentroDer">--</span> días
+    Nos vemos en<br><span id="contadorEncuentroDer">--</span> días
   </div>
 
   <!-- PORTADA -->
   <section class="portada">
-    <h1 class="titulo">45 días con usted 🩷</h1>
+    <h1 class="titulo" id="tituloSecreto">45 días con usted 🩷</h1>
 
     <div id="bloqueCarta" class="bloque-carta">
       <p id="estadoCarta">Cargando…</p>
@@ -44,14 +41,17 @@
     </div>
   </section>
 
-  <!-- CANCIÓN DEL DÍA -->
-  <section id="seccionCancion" class="cancion-dia">
-    <p class="label">🎵 Canción del día</p>
-    <h3 id="tituloCancion">Canción del día</h3>
-    <p id="artistaCancion">Artista</p>
-    <a id="linkCancion" href="https://open.spotify.com/" target="_blank">
-      Abrir en Spotify
-    </a>
+  <!-- MENSAJE ESPECIAL -->
+  <section id="mensajeEspecial" class="mensaje-especial oculto">
+    <p id="textoMensajeEspecial"></p>
+  </section>
+
+  <!-- CANCIÓN -->
+  <section class="cancion-dia">
+    <p>🎵 Canción del día</p>
+    <h3 id="tituloCancion"></h3>
+    <p id="artistaCancion"></p>
+    <a id="linkCancion" target="_blank">Abrir en Spotify</a>
   </section>
 
   <!-- SELECTOR -->
@@ -61,8 +61,11 @@
 
   <!-- CARTA -->
   <section id="seccionCarta" class="carta-seccion oculto">
-    <div class="carta">
-      <p id="contenidoCarta"></p>
+    <div class="sobre">
+      <div class="tapa"></div>
+      <div class="contenido-sobre">
+        <p id="contenidoCarta"></p>
+      </div>
     </div>
   </section>
 
@@ -70,17 +73,17 @@
   <section class="galeria-doble">
 
     <div class="bloque-fotos">
-      <h2 class="titulo-galeria">Nuestros momentos ✨</h2>
+      <h2>Nuestros momentos ✨</h2>
       <div class="carrusel">
-        <button class="flecha" onclick="anterior()">‹</button>
-        <img id="imagenCarrusel" alt="Nuestros momentos">
-        <button class="flecha" onclick="siguiente()">›</button>
+        <button onclick="anterior()">‹</button>
+        <img id="imagenCarrusel">
+        <button onclick="siguiente()">›</button>
       </div>
     </div>
 
     <div class="bloque-video">
-      <h2 class="titulo-galeria">Mensaje del día 💌</h2>
-      <p class="texto-video" id="textoVideo">Hoy quería decirle…</p>
+      <h2>Mensaje del día 💌</h2>
+      <p id="textoVideo"></p>
       <video id="videoDiario" controls playsinline></video>
     </div>
 
