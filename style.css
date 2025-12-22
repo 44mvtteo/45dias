@@ -4,9 +4,7 @@ body {
   background: linear-gradient(180deg,#fce4ec,#e1bee7,#e3f2fd);
 }
 
-.oculto {
-  display: none;
-}
+.oculto { display: none; }
 
 /* PASSWORD */
 .pantalla-password {
@@ -23,67 +21,87 @@ body {
   text-align: center;
 }
 
-/* CONTENIDO */
-.contenido {
-  padding-bottom: 80px;
+/* CONTADORES LATERALES */
+.contador-lateral {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 13px;
+  opacity: 0.6;
 }
+.izquierda { left: 10px; }
+.derecha { right: 10px; }
 
-/* BLOQUES */
-.bloque {
-  width: 100%;
-  max-width: 520px;
-  margin: 40px auto;
+/* PORTADA */
+.portada {
   text-align: center;
+  padding: 40px 20px;
 }
 
-/* TITULO */
-.titulo {
-  font-size: 2.2em;
-  margin-bottom: 20px;
-}
-
-/* CARTA BOTON */
 .bloque-carta {
   background: white;
+  width: 260px;
+  margin: 30px auto;
   padding: 20px;
   border-radius: 15px;
 }
 
 /* CANCIÓN */
 .cancion-dia {
-  background: white;
+  max-width: 420px;
+  margin: 30px auto;
   padding: 20px;
+  background: white;
   border-radius: 15px;
+  text-align: center;
+}
+
+/* SELECTOR */
+.selector-cartas {
+  text-align: center;
+  margin: 20px 0;
 }
 
 /* CARTA */
 .carta {
   background: white;
-  padding: 35px;
+  max-width: 520px;
+  margin: 30px auto;
+  padding: 40px;
   border-radius: 15px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
 
-.carta p {
-  white-space: pre-line;
-  text-align: left;
+.carta p { white-space: pre-line; }
+
+/* GALERÍA */
+.galeria-doble {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  margin: 60px 0;
 }
 
-/* CARRUSEL */
+.bloque-fotos, .bloque-video {
+  width: 300px;
+  text-align: center;
+}
+
 .carrusel {
   display: flex;
-  justify-content: center;
   align-items: center;
   gap: 15px;
 }
 
 .carrusel img {
-  width: 100%;
-  max-width: 280px;
+  width: 260px;
+  height: 260px;
+  object-fit: cover;
   border-radius: 18px;
 }
 
-.carrusel button {
+.flecha {
   border: none;
   background: white;
   border-radius: 50%;
@@ -96,28 +114,24 @@ video {
   border-radius: 15px;
 }
 
-/* CONTADORES (solo escritorio) */
-.contador-lateral {
-  position: fixed;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 14px;
-  opacity: 0.6;
+/* RELOJ */
+.contador-reloj {
+  margin-top: 20px;
+  background: white;
+  padding: 15px;
+  border-radius: 15px;
 }
 
-.izquierda { left: 15px; }
-.derecha { right: 15px; }
+.reloj-titulo {
+  color: #7b0000;
+  font-size: 0.9em;
+}
 
-/* 📱 CELULAR */
-@media (max-width: 768px) {
-
-  .contador-lateral {
-    display: none;
-  }
-
-  .bloque {
-    margin: 30px auto;
-    padding: 0 10px;
-  }
-
+#relojEncuentro {
+  background: #1a1a1a;
+  color: #ff3b3b;
+  font-family: monospace;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 1.3em;
 }
