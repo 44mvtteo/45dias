@@ -1,13 +1,11 @@
 body {
   margin: 0;
   font-family: 'Playfair Display', serif;
-  background: linear-gradient(180deg, #fce4ec, #e1bee7, #e3f2fd);
-  color: #333;
+  background: linear-gradient(180deg,#fce4ec,#e1bee7,#e3f2fd);
 }
 
 .oculto { display: none; }
 
-/* PASSWORD */
 .pantalla-password {
   height: 100vh;
   display: flex;
@@ -17,100 +15,66 @@ body {
 
 .password-box {
   background: white;
-  padding: 40px;
-  border-radius: 18px;
-  text-align: center;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-}
-
-/* CONTENIDO */
-.contenido {
-  padding: 30px 15px;
+  padding: 30px;
+  border-radius: 15px;
   text-align: center;
 }
 
-/* TITULO */
-.titulo {
-  font-size: 2.4em;
-  margin-bottom: 20px;
+.titulo-principal {
+  text-align: center;
+  margin-top: 30px;
 }
 
-/* BLOQUE CARTA */
 .bloque-carta {
   background: white;
-  max-width: 280px;
-  margin: 0 auto 30px;
+  margin: 20px auto;
+  width: 260px;
   padding: 20px;
   border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  text-align: center;
+  cursor: pointer;
 }
 
-/* CANCIÓN */
-.cancion-dia {
+.tarjeta {
   background: white;
-  max-width: 320px;
   margin: 30px auto;
   padding: 20px;
+  max-width: 360px;
   border-radius: 15px;
+  text-align: center;
 }
 
-/* CARTA */
-.carta {
-  background: white;
-  max-width: 520px;
-  margin: 30px auto;
-  padding: 35px;
-  border-radius: 18px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-  white-space: pre-line;
-}
-
-/* GALERIA */
-.galeria {
-  margin: 50px 0;
+.cover {
+  width: 180px;
+  border-radius: 10px;
 }
 
 .carrusel {
   display: flex;
-  justify-content: center;
   align-items: center;
-  gap: 20px;
+  justify-content: center;
+  gap: 15px;
 }
 
 .carrusel img {
-  width: 260px;
-  height: 260px;
-  object-fit: cover;
-  border-radius: 18px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+  width: 240px;
+  border-radius: 15px;
 }
 
-.carrusel button {
+button {
   border: none;
-  background: white;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
+  background: #fff;
   font-size: 1.5em;
+  border-radius: 50%;
   cursor: pointer;
 }
 
-/* VIDEO */
-.video video {
+video {
   width: 100%;
-  max-width: 320px;
   border-radius: 15px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
 }
 
-/* CONTADOR FINAL */
-.contador-final {
-  background: #1b1b1b;
-  color: #ff5252;
-  max-width: 320px;
-  margin: 40px auto;
-  padding: 20px;
-  border-radius: 15px;
-  font-family: monospace;
-  font-size: 1.2em;
+.reloj {
+  font-size: 1.3em;
+  color: darkred;
 }
