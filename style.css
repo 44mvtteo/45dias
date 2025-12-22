@@ -187,4 +187,45 @@ video {
   }
 
 }
+/* ===============================
+   ANIMACIÓN SOBRE
+=================================*/
+
+.sobre {
+  position: relative;
+  overflow: hidden;
+}
+
+.solapa {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60%;
+  background: linear-gradient(135deg, #f8bbd0, #f48fb1);
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+  transform-origin: top;
+  transition: transform 0.8s ease;
+  z-index: 2;
+}
+
+.sobre.abierto .solapa {
+  transform: rotateX(180deg);
+}
+
+.carta-seccion {
+  animation: aparecerCarta 0.8s ease forwards;
+}
+
+@keyframes aparecerCarta {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 
