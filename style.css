@@ -244,11 +244,14 @@ video {
 .bloque-carta p,
 .bloque-carta span {
   position: relative;
-  z-index: 2;
+  z-index: 3;
+}
+
 }
 .bloque-carta.abierto::before {
   transform: rotateX(180deg);
 }
+
 
 
 
