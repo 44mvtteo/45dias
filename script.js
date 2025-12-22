@@ -53,13 +53,17 @@ function actualizarCarta() {
 }
 
 
-function abrirCarta(dia){
-  bloqueCarta.classList.add("abierto");
-  setTimeout(()=>{
-    seccionCarta.classList.remove("oculto");
-    contenidoCarta.innerText = cartas[dia];
-  },600);
+function abrirCarta(dia) {
+  const sobre = document.getElementById("bloqueCarta");
+  sobre.classList.add("abierto");
+
+  setTimeout(() => {
+    document.getElementById("seccionCarta").classList.remove("oculto");
+    document.getElementById("numeroDia").innerText = `DÍA ${dia + 1}`;
+    document.getElementById("contenidoCarta").innerText = cartas[dia];
+  }, 600);
 }
+
 
 function construirSelector(){
   listaCartas.innerHTML="";
@@ -96,4 +100,5 @@ function actualizarContadorFinal(){
 function mostrarFoto(){ imagenCarrusel.src=fotos[indice]; }
 function siguiente(){ indice=(indice+1)%fotos.length; mostrarFoto(); }
 function anterior(){ indice=(indice-1+fotos.length)%fotos.length; mostrarFoto(); }
+
 
