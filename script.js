@@ -3,93 +3,100 @@ const PASSWORD = "1308";
 const FECHA_INICIO = new Date("2026-01-09T09:00:00-03:00");
 const FECHA_ENCUENTRO = new Date("2026-02-22T00:00:00-03:00");
 
-const cartas = [
-  "Carta 1\n\nAquí escribes la carta del día."
+// CARTAS
+const cartas = Array.from({ length: 45 }, (_, i) =>
+  `Carta ${i + 1}\n\nAquí escribes la carta del día.`
+);
+
+// CANCIÓN (ejemplo real)
+const canciones = [
+  {
+    titulo: "Te Amo",
+    artista: "Franco De Vita",
+    link: "https://open.spotify.com/track/5OcnF9C1E5d6R2R8Zt0E8L",
+    cover: "https://i.scdn.co/image/ab67616d0000b273b6e1b7a1a1cfe9a7a1f5c9a5"
+  }
 ];
 
-const canciones = [{
-  titulo: "Te Amo",
-  artista: "Franco De Vita",
-  link: "https://open.spotify.com/"
-}];
-
-const mensajesVideo = ["Hoy quería decirle…"];
-
+// FOTOS
 const fotos = [];
-for (let i = 1; i <= 50; i++) {
-  fotos.push(`imagenes/foto${i}.jpg`);
-}
+for (let i = 1; i <= 50; i++) fotos.push(`imagenes/foto${i}.jpg`);
 let indice = 0;
 
+/* PASSWORD */
 function verificarPassword() {
-  const input = document.getElementById("inputPassword").value;
-  if (input !== PASSWORD) {
-    document.getElementById("errorPassword").innerText = "Contraseña incorrecta";
+  if (inputPassword.value !== PASSWORD) {
+    errorPassword.innerText = "Contraseña incorrecta";
     return;
   }
-  document.getElementById("pantallaPassword").style.display = "none";
-  document.getElementById("contenidoPrincipal").classList.remove("oculto");
+  pantallaPassword.style.display = "none";
+  contenidoPrincipal.classList.remove("oculto");
   iniciar();
 }
 
+/* INICIO */
 function iniciar() {
   actualizarCarta();
   cargarCancion();
-  cargarVideo();
   mostrarFoto();
-  actualizarEncuentro();
-  setInterval(actualizarCarta, 60000);
-  setInterval(actualizarEncuentro, 1000);
+  cargarVideo();
+  actualizarContador();
+  setInterval(actualizarContador, 1000);
 }
 
+/* CARTA */
 function actualizarCarta() {
   const diff = FECHA_INICIO - new Date();
   if (diff > 0) {
-    document.getElementById("estadoCarta").innerText = "La carta se abre en:";
-    document.getElementById("contadorDesbloqueo").innerText =
+    estadoCarta.innerText = "La carta se abre en:";
+    contadorDesbloqueo.innerText =
       Math.floor(diff / 3600000) + "h " +
       Math.floor((diff % 3600000) / 60000) + "m";
+    bloqueCarta.onclick = null;
   } else {
-    document.getElementById("estadoCarta").innerText = "Leer carta 💌";
-    document.getElementById("contadorDesbloqueo").innerText = "";
-    document.getElementById("bloqueCarta").onclick = () => {
-      document.getElementById("seccionCarta").classList.remove("oculto");
-      document.getElementById("contenidoCarta").innerText = cartas[0];
+    estadoCarta.innerText = "Abrir carta 💌";
+    contadorDesbloqueo.innerText = "";
+    bloqueCarta.onclick = () => {
+      seccionCarta.classList.remove("oculto");
+      contenidoCarta.innerText = cartas[0];
     };
   }
 }
 
+/* CANCIÓN */
 function cargarCancion() {
-  document.getElementById("tituloCancion").innerText = canciones[0].titulo;
-  document.getElementById("artistaCancion").innerText = canciones[0].artista;
-  document.getElementById("linkCancion").href = canciones[0].link;
+  const c = canciones[0];
+  tituloCancion.innerText = c.titulo;
+  artistaCancion.innerText = c.artista;
+  linkCancion.href = c.link;
+  coverSpotify.src = c.cover;
 }
 
-function cargarVideo() {
-  document.getElementById("videoDiario").src = "videos/video1.mp4";
-  document.getElementById("textoVideo").innerText = mensajesVideo[0];
-}
-
+/* GALERÍA */
 function mostrarFoto() {
-  document.getElementById("imagenCarrusel").src = fotos[indice];
+  imagenCarrusel.src = fotos[indice];
 }
-
 function siguiente() {
   indice = (indice + 1) % fotos.length;
   mostrarFoto();
 }
-
 function anterior() {
   indice = (indice - 1 + fotos.length) % fotos.length;
   mostrarFoto();
 }
 
-function actualizarEncuentro() {
-  const diff = FECHA_ENCUENTRO - new Date();
-  const d = Math.floor(diff / 86400000);
-  const h = Math.floor((diff % 86400000) / 3600000);
-  const m = Math.floor((diff % 3600000) / 60000);
-  const s = Math.floor((diff % 60000) / 1000);
-  document.getElementById("contadorEncuentro").innerText =
-    `${d}d ${h}h ${m}m ${s}s`;
+/* VIDEO */
+function cargarVideo() {
+  textoVideo.innerText = "Hoy quería decirle…";
+  videoDiario.src = "videos/video1.mp4";
+}
+
+/* CONTADOR */
+function actualizarContador() {
+  const d = FECHA_ENCUENTRO - new Date();
+  const dias = Math.floor(d / 86400000);
+  const horas = Math.floor((d % 86400000) / 3600000);
+  const min = Math.floor((d % 3600000) / 60000);
+  const sec = Math.floor((d % 60000) / 1000);
+  contadorEncuentro.innerText = `${dias}d ${horas}h ${min}m ${sec}s`;
 }
