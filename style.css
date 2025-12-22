@@ -41,7 +41,9 @@ body {
   width: 260px;
   border-radius: 16px;
   cursor: pointer;
+
 }
+
 
 /* CANCIÓN */
 .cancion-dia {
@@ -232,6 +234,12 @@ video {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+.bloque-carta p,
+.bloque-carta span {
+  position: relative;
+  z-index: 2;
 }
 
 
