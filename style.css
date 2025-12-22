@@ -126,3 +126,65 @@ video {
     justify-content: center;
   }
 }
+/* ===============================
+   AJUSTE MOBILE – iPHONE 11
+=================================*/
+
+@media (max-width: 430px) {
+
+  body {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .portada {
+    padding: 30px 15px;
+  }
+
+  .titulo {
+    font-size: 2em;
+  }
+
+  .bloque-carta,
+  .cancion-dia,
+  .carta {
+    width: 100%;
+    max-width: 340px;
+    margin: 25px auto;
+  }
+
+  .selector-cartas select {
+    font-size: 16px;
+    padding: 10px;
+    width: 90%;
+  }
+
+  .galeria-doble {
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .bloque-fotos,
+  .bloque-video {
+    width: 100%;
+    max-width: 340px;
+    margin: 0 auto;
+  }
+
+  .carrusel img {
+    width: 100%;
+    height: auto;
+  }
+
+  .flecha {
+    width: 48px;
+    height: 48px;
+    font-size: 1.5em;
+  }
+
+  .contador-lateral {
+    display: none; /* en móvil usamos SOLO el contador grande */
+  }
+
+}
+
