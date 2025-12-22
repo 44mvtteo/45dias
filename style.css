@@ -27,13 +27,50 @@ body {
 /* PORTADA */
 .portada {
   text-align: center;
-  padding: 50px 20px;
+  padding: 40px 20px;
 }
 
 .titulo {
-  font-size: 2.4em;
+  font-size: 2.2em;
 }
 
+/* SOBRE */
+.bloque-carta {
+  position: relative;
+  background: white;
+  width: 260px;
+  margin: 30px auto;
+  padding: 40px 20px 25px;
+  border-radius: 15px;
+  box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+  cursor: pointer;
+  overflow: visible;
+}
+
+.bloque-carta p,
+.bloque-carta span {
+  position: relative;
+  z-index: 3;
+}
+
+.solapa {
+  position: absolute;
+  top: -18px;
+  left: 0;
+  width: 100%;
+  height: 18px;
+  background: #f8bbd0;
+  clip-path: polygon(0 100%, 50% 0, 100% 100%);
+  transform-origin: top;
+  transition: transform 0.6s ease;
+  z-index: 2;
+}
+
+.bloque-carta.abierto .solapa {
+  transform: rotateX(180deg);
+}
+
+/* CARTA CUADERNO */
 .carta {
   background: repeating-linear-gradient(
     white,
@@ -46,11 +83,11 @@ body {
   padding: 50px 35px;
   border-radius: 12px;
   box-shadow: 0 15px 35px rgba(0,0,0,0.25);
-  font-size: 16px;
   line-height: 27px;
   position: relative;
-  
-  .carta::before {
+}
+
+.carta::before {
   content: "";
   position: absolute;
   top: 0;
@@ -58,229 +95,62 @@ body {
   width: 2px;
   height: 100%;
   background: #e57373;
+}
 
-    .carta p {
+.carta p {
   white-space: pre-line;
-  position: relative;
-  z-index: 2;
 }
-
-}
-
-}
-
-
-}
-
 
 /* CANCIÓN */
 .cancion-dia {
   max-width: 420px;
-  margin: auto;
+  margin: 30px auto;
   background: white;
   padding: 20px;
   border-radius: 16px;
   text-align: center;
 }
 
-/* SELECTOR */
-.selector-cartas {
-  text-align: center;
-  margin: 20px;
-}
-
-.bloque-carta::before {
-  content: "";
-  position: absolute;
-  top: -18px;
-  left: 0;
-  width: 100%;
-  height: 18px;
-  background: #f8bbd0;
-  clip-path: polygon(0 100%, 50% 0, 100% 100%);
-  transition: transform 0.6s ease;
-  transform-origin: top;
-  z-index: 1;
-  pointer-events: none;
-}
-
 /* GALERÍA */
 .galeria {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 50px;
   padding: 40px 20px;
-}
-
-.bloque {
-  text-align: center;
+  align-items: center;
 }
 
 .carrusel {
   display: flex;
-  align-items: center;
-  justify-content: center;
   gap: 15px;
+  align-items: center;
 }
 
 .carrusel img {
   width: 260px;
-  height: 260px;
-  object-fit: cover;
   border-radius: 18px;
 }
 
-.carrusel button {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  border: none;
-  background: white;
-  font-size: 1.4em;
-}
-
-/* VIDEO */
 video {
   width: 100%;
   border-radius: 16px;
-  margin-top: 10px;
 }
 
 .contador-final {
   margin-top: 15px;
   background: #300;
-  color: red;
-  font-family: monospace;
+  color: #ff8080;
   padding: 10px;
   border-radius: 12px;
+  font-family: monospace;
 }
 
-/* RESPONSIVE */
-@media (min-width: 768px) {
-  .galeria {
-    flex-direction: row;
-    justify-content: center;
-  }
-}
-/* ===============================
-   AJUSTE MOBILE – iPHONE 11
-=================================*/
-
+/* MOBILE */
 @media (max-width: 430px) {
-
-  body {
-    font-size: 16px;
-    line-height: 1.6;
-  }
-
-  .portada {
-    padding: 30px 15px;
-  }
-
-  .titulo {
-    font-size: 2em;
-  }
-
   .bloque-carta,
   .cancion-dia,
   .carta {
     width: 100%;
     max-width: 340px;
-    margin: 25px auto;
-  }
-
-  .selector-cartas select {
-    font-size: 16px;
-    padding: 10px;
-    width: 90%;
-  }
-
-  .galeria-doble {
-    flex-direction: column;
-    gap: 50px;
-  }
-
-  .bloque-fotos,
-  .bloque-video {
-    width: 100%;
-    max-width: 340px;
-    margin: 0 auto;
-  }
-
-  .carrusel img {
-    width: 100%;
-    height: auto;
-  }
-
-  .flecha {
-    width: 48px;
-    height: 48px;
-    font-size: 1.5em;
-  }
-
-  .contador-lateral {
-    display: none; /* en móvil usamos SOLO el contador grande */
-  }
-
-}
-/* ===============================
-   ANIMACIÓN SOBRE
-=================================*/
-
-.sobre {
-  position: relative;
-  overflow: hidden;
-}
-
-.solapa {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 60%;
-  background: linear-gradient(135deg, #f8bbd0, #f48fb1);
-  clip-path: polygon(0 0, 100% 0, 50% 100%);
-  transform-origin: top;
-  transition: transform 0.8s ease;
-  z-index: 2;
-}
-
-.sobre.abierto .solapa {
-  transform: rotateX(180deg);
-}
-
-.carta-seccion {
-  animation: aparecerCarta 0.8s ease forwards;
-}
-
-@keyframes aparecerCarta {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
   }
 }
-
-.bloque-carta p,
-.bloque-carta span {
-  position: relative;
-  z-index: 3;
-}
-
-}
-.bloque-carta.abierto::before {
-  transform: rotateX(180deg);
-}
-
-
-
-
-
-
-
-
-
-
