@@ -2,6 +2,7 @@ body {
   margin: 0;
   font-family: 'Playfair Display', serif;
   background: linear-gradient(180deg,#fce4ec,#e1bee7,#e3f2fd);
+  color: #333;
 }
 
 .oculto { display: none; }
@@ -15,66 +16,50 @@ body {
 
 .password-box {
   background: white;
-  padding: 30px;
-  border-radius: 15px;
+  padding: 40px;
+  border-radius: 16px;
   text-align: center;
 }
 
-.titulo-principal {
+.titulo {
   text-align: center;
   margin-top: 30px;
 }
 
 .bloque-carta {
   background: white;
-  margin: 20px auto;
   width: 260px;
+  margin: 20px auto;
   padding: 20px;
-  border-radius: 15px;
+  border-radius: 14px;
   text-align: center;
-  cursor: pointer;
 }
 
-.tarjeta {
+.cancion-dia {
   background: white;
   margin: 30px auto;
   padding: 20px;
-  max-width: 360px;
-  border-radius: 15px;
+  width: 320px;
+  border-radius: 14px;
   text-align: center;
 }
 
-.cover {
-  width: 180px;
-  border-radius: 10px;
+.carta {
+  background: white;
+  width: 80%;
+  max-width: 500px;
+  margin: 30px auto;
+  padding: 30px;
+  border-radius: 14px;
 }
 
 .carrusel {
   display: flex;
-  align-items: center;
   justify-content: center;
-  gap: 15px;
+  gap: 20px;
 }
 
 .carrusel img {
-  width: 240px;
-  border-radius: 15px;
-}
-
-button {
-  border: none;
-  background: #fff;
-  font-size: 1.5em;
-  border-radius: 50%;
-  cursor: pointer;
-}
-
-video {
-  width: 100%;
-  border-radius: 15px;
-}
-
-.reloj {
-  font-size: 1.3em;
-  color: darkred;
+  width: 260px;
+  border-radius: 14px;
 }
