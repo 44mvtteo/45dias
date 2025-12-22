@@ -36,11 +36,16 @@ body {
 
 .bloque-carta {
   background: white;
-  margin: 30px auto;
-  padding: 20px;
   width: 260px;
-  border-radius: 16px;
+  margin: 30px auto;
+  padding: 35px 20px 25px;
+  border-radius: 15px;
+  position: relative;
+  text-align: center;
   cursor: pointer;
+  box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+  overflow: visible;
+}
 
 }
 
@@ -244,6 +249,7 @@ video {
 .bloque-carta.abierto::before {
   transform: rotateX(180deg);
 }
+
 
 
 
