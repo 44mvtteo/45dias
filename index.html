@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>45 días contigo 💖</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>45 días con usted 💗</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="estilo.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="estilo.css">
 </head>
 
 <body>
 
-<!-- PASSWORD -->
+<!-- PANTALLA PASSWORD -->
 <div id="pantallaPassword" class="pantalla-password">
   <div class="password-box">
-    <h1>45 días contigo 💖</h1>
+    <h1>45 días con usted 💗</h1>
     <input type="password" id="inputPassword" placeholder="Contraseña">
     <button onclick="verificarPassword()">Entrar</button>
     <p id="errorPassword"></p>
@@ -22,45 +22,63 @@
 </div>
 
 <!-- CONTENIDO -->
-<div id="contenidoPrincipal" class="contenido oculto">
+<div id="contenidoPrincipal" class="oculto">
 
-  <h1 class="titulo">45 días contigo 💖</h1>
+  <!-- PORTADA -->
+  <section class="portada">
+    <h1 class="titulo">45 días con usted 💗</h1>
 
-  <div id="bloqueCarta" class="bloque-carta">
-    <p id="estadoCarta">Cargando…</p>
-    <span id="contadorDesbloqueo"></span>
-  </div>
+    <div class="bloque-carta" id="bloqueCarta">
+      <p id="estadoCarta">Cargando…</p>
+      <p id="contadorDesbloqueo"></p>
+    </div>
+  </section>
 
   <!-- CANCIÓN -->
   <section class="cancion-dia">
-    <p>🎵 Canción del día</p>
+    <p class="label">🎵 Canción del día</p>
     <h3 id="tituloCancion"></h3>
     <p id="artistaCancion"></p>
     <a id="linkCancion" target="_blank">Abrir en Spotify</a>
   </section>
 
-  <!-- CARTA -->
-  <section id="seccionCarta" class="carta oculto">
-    <p id="contenidoCarta"></p>
-  </section>
-
-  <!-- GALERÍA -->
-  <h2>Nuestros momentos ✨</h2>
-  <div class="carrusel">
-    <button onclick="anterior()">‹</button>
-    <img id="imagenCarrusel">
-    <button onclick="siguiente()">›</button>
+  <!-- SELECTOR -->
+  <div class="selector-cartas">
+    <select id="listaCartas"></select>
   </div>
 
-  <!-- VIDEO -->
-  <h2>Mensaje del día 💌</h2>
-  <video id="videoDiario" controls></video>
+  <!-- CARTA -->
+  <section id="seccionCarta" class="oculto">
+    <div class="carta">
+      <p id="contenidoCarta"></p>
+    </div>
+  </section>
+
+  <!-- GALERÍA + VIDEO -->
+  <section class="galeria">
+    <div class="bloque">
+      <h2>Nuestros momentos ✨</h2>
+      <div class="carrusel">
+        <button onclick="anterior()">‹</button>
+        <img id="imagenCarrusel">
+        <button onclick="siguiente()">›</button>
+      </div>
+    </div>
+
+    <div class="bloque">
+      <h2>Mensaje del día 💌</h2>
+      <p id="textoVideo"></p>
+      <video id="videoDiario" controls playsinline></video>
+
+      <div class="contador-final">
+        ⏳ <span id="contadorFinal"></span>
+      </div>
+    </div>
+  </section>
 
 </div>
 
 <script src="script.js"></script>
 </body>
 </html>
-<title>TEST CAMBIO</title>
-<h1>ESTO ES UNA PRUEBA</h1>
 
