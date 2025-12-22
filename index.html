@@ -6,13 +6,12 @@
   <title>45 días con usted 💗</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- PANTALLA PASSWORD -->
+<!-- PASSWORD -->
 <div id="pantallaPassword" class="pantalla-password">
   <div class="password-box">
     <h1>45 días con usted 💗</h1>
@@ -25,41 +24,35 @@
 <!-- CONTENIDO -->
 <div id="contenidoPrincipal" class="oculto">
 
-  <!-- PORTADA -->
   <section class="portada">
     <h1 class="titulo">45 días con usted 💗</h1>
 
-<div id="bloqueCarta" class="bloque-carta sobre">
-  <span class="solapa"></span>
-  <p id="estadoCarta">Cargando…</p>
-  <span id="contadorDesbloqueo"></span>
-</div>
-
+    <div id="bloqueCarta" class="bloque-carta">
+      <div class="solapa"></div>
+      <p id="estadoCarta">Cargando…</p>
+      <span id="contadorDesbloqueo"></span>
+    </div>
   </section>
 
-  <!-- CANCIÓN -->
   <section class="cancion-dia">
-    <p class="label">🎵 Canción del día</p>
+    <p>🎵 Canción del día</p>
     <h3 id="tituloCancion"></h3>
     <p id="artistaCancion"></p>
     <a id="linkCancion" target="_blank">Abrir en Spotify</a>
   </section>
 
-  <!-- SELECTOR -->
   <div class="selector-cartas">
     <select id="listaCartas"></select>
   </div>
 
-  <!-- CARTA -->
   <section id="seccionCarta" class="oculto">
     <div class="carta">
       <p id="contenidoCarta"></p>
     </div>
   </section>
 
-  <!-- GALERÍA + VIDEO -->
   <section class="galeria">
-    <div class="bloque">
+    <div>
       <h2>Nuestros momentos ✨</h2>
       <div class="carrusel">
         <button onclick="anterior()">‹</button>
@@ -68,7 +61,7 @@
       </div>
     </div>
 
-    <div class="bloque">
+    <div>
       <h2>Mensaje del día 💌</h2>
       <p id="textoVideo"></p>
       <video id="videoDiario" controls playsinline></video>
@@ -84,6 +77,3 @@
 <script src="script.js"></script>
 </body>
 </html>
-
-
-
