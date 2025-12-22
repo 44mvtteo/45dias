@@ -241,6 +241,10 @@ video {
   position: relative;
   z-index: 2;
 }
+.bloque-carta.abierto::before {
+  transform: rotateX(180deg);
+}
+
 
 
 
