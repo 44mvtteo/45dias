@@ -2,16 +2,15 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>45 días con usted 🩷</title>
+  <title>45 días con usted</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- PASSWORD -->
+<!-- PANTALLA PASSWORD -->
 <div id="pantallaPassword" class="pantalla-password">
   <div class="password-box">
     <h1>45 días con usted 🩷</h1>
@@ -22,73 +21,30 @@
 </div>
 
 <!-- CONTENIDO -->
-<div id="contenidoPrincipal" class="contenido oculto">
+<div id="contenido" class="contenido oculto">
 
-  <!-- CONTADORES LATERALES -->
-  <div class="contador-lateral izquierda">
-    Nos vemos en<br><span id="contadorEncuentroIzq">--</span>
-  </div>
-  <div class="contador-lateral derecha">
-    Nos vemos en<br><span id="contadorEncuentroDer">--</span>
-  </div>
+  <h1 class="titulo">45 días con usted 🩷</h1>
 
-  <!-- PORTADA -->
-  <section class="portada">
-    <h1 class="titulo">45 días con usted 🩷</h1>
-
-    <div id="bloqueCarta" class="bloque-carta">
-      <p id="estadoCarta">Cargando…</p>
-      <span id="contadorDesbloqueo"></span>
-    </div>
-  </section>
-
-  <!-- CANCIÓN DEL DÍA -->
-  <section class="cancion-dia">
-    <p class="label">🎵 Canción del día</p>
-    <h3 id="tituloCancion">Te Amo</h3>
-    <p id="artistaCancion">Franco De Vita</p>
-    <a id="linkCancion"
-       href="https://open.spotify.com/track/5j6z9v5sFZsVj6Y2kz8L5C"
-       target="_blank">Abrir en Spotify</a>
-  </section>
-
-  <!-- SELECTOR -->
-  <div class="selector-cartas">
-    <select id="listaCartas"></select>
+  <div class="bloque">
+    <p id="estadoCarta">Cargando…</p>
+    <p id="contadorCarta"></p>
   </div>
 
-  <!-- CARTA -->
-  <section id="seccionCarta" class="carta-seccion oculto">
-    <div class="carta">
-      <p id="contenidoCarta"></p>
-    </div>
-  </section>
+  <div class="bloque">
+    <h2>Carta del día</h2>
+    <p id="textoCarta"></p>
+  </div>
 
-  <!-- GALERÍA + VIDEO -->
-  <section class="galeria-doble">
+  <div class="bloque">
+    <h2>Canción del día</h2>
+    <p id="tituloCancion"></p>
+    <a id="linkCancion" target="_blank">Abrir en Spotify</a>
+  </div>
 
-    <div class="bloque-fotos">
-      <h2>Nuestros momentos ✨</h2>
-      <div class="carrusel">
-        <button class="flecha" onclick="anterior()">‹</button>
-        <img id="imagenCarrusel">
-        <button class="flecha" onclick="siguiente()">›</button>
-      </div>
-    </div>
-
-    <div class="bloque-video">
-      <h2>Mensaje del día 💌</h2>
-      <p id="textoVideo">Hoy quería decirle…</p>
-      <video id="videoDiario" controls playsinline></video>
-
-      <!-- CONTADOR COMPLETO -->
-      <div class="contador-reloj">
-        <p class="reloj-titulo">⏳ Cuenta regresiva para vernos</p>
-        <div id="relojEncuentro">--d --h --m --s</div>
-      </div>
-    </div>
-
-  </section>
+  <div class="bloque">
+    <h2>Nos vemos en</h2>
+    <p id="contadorEncuentro"></p>
+  </div>
 
 </div>
 
