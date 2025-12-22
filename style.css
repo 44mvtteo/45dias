@@ -177,4 +177,16 @@ video {
 
 }
 
+.numero-dia {
+  position: absolute;
+  top: 20px;
+  left: 15px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #b71c1c;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  opacity: 0.8;
+}
+
 
