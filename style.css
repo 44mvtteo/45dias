@@ -4,11 +4,6 @@ body {
   background: linear-gradient(180deg,#fce4ec,#e1bee7,#e3f2fd);
 }
 
-body.noche {
-  background: linear-gradient(180deg,#2b2b2b,#1a1a1a);
-  color: #eee;
-}
-
 .oculto { display: none; }
 
 /* PASSWORD */
@@ -19,42 +14,76 @@ body.noche {
   align-items: center;
 }
 
+.password-box {
+  background: white;
+  padding: 40px;
+  border-radius: 15px;
+  text-align: center;
+}
+
 /* CONTADORES */
 .contador-lateral {
   position: fixed;
   top: 50%;
   transform: translateY(-50%);
   font-size: 14px;
-  opacity: .6;
+  opacity: 0.6;
+  text-align: center;
+}
+
+.contador-lateral span {
+  font-size: 22px;
+  font-weight: bold;
 }
 
 .izquierda { left: 15px; }
 .derecha { right: 15px; }
 
 /* PORTADA */
-.portada { text-align: center; padding: 50px 20px; }
-
-/* CARTA SOBRE */
-.sobre {
-  width: 300px;
-  margin: auto;
-  position: relative;
+.portada {
+  text-align: center;
+  padding: 50px 20px;
 }
 
-.tapa {
-  height: 80px;
-  background: #f8bbd0;
-  transform-origin: top;
-  transition: transform 1s;
+.titulo {
+  font-size: 2.5em;
 }
 
-.sobre.abierta .tapa {
-  transform: rotateX(180deg);
-}
-
-.contenido-sobre {
+.bloque-carta {
   background: white;
-  padding: 30px;
+  width: 260px;
+  margin: 30px auto;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+/* CANCIÓN */
+.cancion-dia {
+  max-width: 420px;
+  margin: 30px auto;
+  padding: 18px;
+  background: rgba(255,255,255,0.95);
+  border-radius: 14px;
+  text-align: center;
+}
+
+/* SELECTOR */
+.selector-cartas {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* CARTA */
+.carta {
+  background: white;
+  max-width: 520px;
+  margin: 30px auto;
+  padding: 40px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.carta p {
+  white-space: pre-line;
 }
 
 /* GALERÍA */
@@ -63,15 +92,64 @@ body.noche {
   justify-content: center;
   gap: 40px;
   flex-wrap: wrap;
+  margin: 60px 0;
+}
+
+.bloque-fotos,
+.bloque-video {
+  width: 300px;
+  text-align: center;
+}
+
+.carrusel {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
 .carrusel img {
   width: 260px;
   height: 260px;
+  object-fit: cover;
+  border-radius: 18px;
+}
+
+.flecha {
+  border: none;
+  background: white;
+  border-radius: 50%;
+  font-size: 1.4em;
+  cursor: pointer;
+}
+
+.bloque-video video {
+  width: 100%;
   border-radius: 15px;
 }
 
-/* RESPONSIVE */
-@media(max-width:768px){
-  .contador-lateral { display:none; }
+/* RESPONSIVE CELULAR */
+@media (max-width: 768px) {
+
+  .contador-lateral {
+    display: none;
+  }
+
+  .bloque-carta,
+  .cancion-dia,
+  .carta,
+  .bloque-fotos,
+  .bloque-video {
+    width: 90%;
+  }
+
+  .galeria-doble {
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .carrusel img {
+    width: 100%;
+    height: auto;
+  }
+
 }
