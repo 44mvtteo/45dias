@@ -1,94 +1,67 @@
 const PASSWORD = "1308";
 
-const FECHA_INICIO = new Date("2026-01-09T09:00:00-03:00");
-const FECHA_ENCUENTRO = new Date("2026-02-22T00:00:00-03:00");
+const FECHA_INICIO = new Date("2026-01-09T09:00:00");
+const FECHA_ENCUENTRO = new Date("2026-02-22T00:00:00");
 
-// CARTAS
-const cartas = Array.from({length:45},(_,i)=>`Carta ${i+1}\n\nAquí escribes la carta.`);
+function verificarPassword() {
+  const input = document.getElementById("inputPassword").value;
 
-// FOTOS
-const fotos = [];
-for(let i=1;i<=50;i++){ fotos.push(`imagenes/foto${i}.jpg`); }
-let indice = 0;
-
-/* PASSWORD */
-function verificarPassword(){
-  if(inputPassword.value!==PASSWORD){
-    errorPassword.innerText="Contraseña incorrecta";
+  if (input !== PASSWORD) {
+    document.getElementById("errorPassword").innerText = "Contraseña incorrecta";
     return;
   }
-  pantallaPassword.style.display="none";
-  contenidoPrincipal.classList.remove("oculto");
+
+  document.getElementById("pantallaPassword").style.display = "none";
+  document.getElementById("contenido").classList.remove("oculto");
+
   iniciar();
 }
 
-/* INICIO */
-function iniciar(){
+function iniciar() {
+  actualizarCarta();
   actualizarEncuentro();
-  actualizarEstadoCarta();
-  construirSelector();
-  cargarVideo();
-  mostrarFoto();
-  actualizarRelojEncuentro();
-  setInterval(actualizarRelojEncuentro,1000);
+  setInterval(actualizarCarta, 60000);
+  setInterval(actualizarEncuentro, 1000);
 }
 
-/* CONTADOR */
-function actualizarEncuentro(){
-  const d=Math.floor((FECHA_ENCUENTRO-new Date())/86400000);
-  contadorEncuentroIzq.innerText=d+" días";
-  contadorEncuentroDer.innerText=d+" días";
+function actualizarCarta() {
+  const ahora = new Date();
+  const diff = FECHA_INICIO - ahora;
+
+  if (diff > 0) {
+    document.getElementById("estadoCarta").innerText = "La carta se abre en:";
+    const horas = Math.floor(diff / 3600000);
+    const minutos = Math.floor((diff % 3600000) / 60000);
+    document.getElementById("contadorCarta").innerText =
+      horas + "h " + minutos + "m";
+    document.getElementById("textoCarta").innerText = "";
+  } else {
+    document.getElementById("estadoCarta").innerText = "Carta disponible 💌";
+    document.getElementById("contadorCarta").innerText = "";
+    document.getElementById("textoCarta").innerText =
+      "Aquí escribes la carta del día.";
+  }
+
+  // Canción de prueba
+  document.getElementById("tituloCancion").innerText =
+    "Te Amo – Franco De Vita";
+  document.getElementById("linkCancion").href =
+    "https://open.spotify.com/";
 }
 
-/* RELOJ */
-function actualizarRelojEncuentro(){
-  const diff=FECHA_ENCUENTRO-new Date();
-  const d=Math.floor(diff/86400000);
-  const h=Math.floor(diff/3600000)%24;
-  const m=Math.floor(diff/60000)%60;
-  const s=Math.floor(diff/1000)%60;
-  relojEncuentro.innerText=`${d}d ${h}h ${m}m ${s}s`;
-}
+function actualizarEncuentro() {
+  const diff = FECHA_ENCUENTRO - new Date();
 
-/* CARTA */
-function actualizarEstadoCarta(){
-  const diff=FECHA_INICIO-new Date();
-  if(diff>0){
-    estadoCarta.innerText="La carta se abre en:";
-    contadorDesbloqueo.innerText=
-      Math.floor(diff/3600000)+"h "+
-      Math.floor(diff/60000)%60+"m";
+  if (diff <= 0) {
+    document.getElementById("contadorEncuentro").innerText = "Hoy 💞";
     return;
   }
-  estadoCarta.innerText="Presione para leer la carta 💌";
-  bloqueCarta.onclick=()=>abrirCarta(0);
-}
 
-/* SELECTOR */
-function construirSelector(){
-  for(let i=0;i<45;i++){
-    const opt=document.createElement("option");
-    opt.value=i;
-    opt.text=`Carta ${i+1}`;
-    listaCartas.appendChild(opt);
-  }
-  listaCartas.onchange=()=>abrirCarta(listaCartas.value);
-}
+  const dias = Math.floor(diff / 86400000);
+  const horas = Math.floor((diff % 86400000) / 3600000);
+  const minutos = Math.floor((diff % 3600000) / 60000);
+  const segundos = Math.floor((diff % 60000) / 1000);
 
-/* ABRIR CARTA */
-function abrirCarta(i){
-  seccionCarta.classList.remove("oculto");
-  contenidoCarta.innerText=cartas[i];
+  document.getElementById("contadorEncuentro").innerText =
+    dias + "d " + horas + "h " + minutos + "m " + segundos + "s";
 }
-
-/* VIDEO */
-function cargarVideo(){
-  videoDiario.src="videos/video1.mp4";
-}
-
-/* CARRUSEL */
-function mostrarFoto(){
-  imagenCarrusel.src=fotos[indice];
-}
-function siguiente(){indice=(indice+1)%fotos.length;mostrarFoto();}
-function anterior(){indice=(indice-1+fotos.length)%fotos.length;mostrarFoto();}
