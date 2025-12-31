@@ -34,41 +34,39 @@ body {
   font-size: 2.2em;
 }
 
-/* SOBRE */
+/* BOTÓN CARTA */
 .bloque-carta {
-  position: relative;
   background: white;
-  width: 260px;
-  margin: 30px auto;
-  padding: 40px 20px 25px;
-  border-radius: 15px;
-  box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+  padding: 20px;
+  border-radius: 16px;
+  max-width: 320px;
+  margin: 25px auto;
   cursor: pointer;
-  overflow: visible;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
 
-.bloque-carta p,
-.bloque-carta span {
-  position: relative;
-  z-index: 3;
+/* CANCIÓN */
+.cancion-dia {
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+  max-width: 320px;
+  margin: 20px auto;
+  text-align: center;
 }
 
-.solapa {
-  position: absolute;
-  top: -35px;
-  left: 0;
-  width: 100%;
-  height: 35px;
-  background: linear-gradient(135deg, #f8bbd0, #f48fb1);
-  clip-path: polygon(0 100%, 50% 0, 100% 100%);
-  transform-origin: top;
-  transition: transform 0.8s ease;
-  z-index: 1;
-  pointer-events: none;
+/* SELECTOR */
+.selector-cartas {
+  display: flex;
+  justify-content: center;
+  margin: 25px 0;
 }
 
-.bloque-carta.abierto .solapa {
-  transform: rotateX(180deg);
+.selector-cartas select {
+  width: 220px;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 10px;
 }
 
 /* CARTA CUADERNO */
@@ -76,14 +74,14 @@ body {
   background: repeating-linear-gradient(
     white,
     white 26px,
-    #e0e0e0 27px
+    #ddd 27px
   );
-  max-width: 420px;
-  min-height: 520px;
-  margin: 40px auto;
+  max-width: 340px;
+  min-height: 550px;
+  margin: 30px auto;
   padding: 50px 35px;
   border-radius: 12px;
-  box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
   line-height: 27px;
   position: relative;
 }
@@ -102,81 +100,6 @@ body {
   white-space: pre-line;
 }
 
-/* CANCIÓN */
-.cancion-dia {
-  max-width: 420px;
-  margin: 30px auto;
-  background: white;
-  padding: 20px;
-  border-radius: 16px;
-  text-align: center;
-}
-
-/* GALERÍA */
-.galeria {
-  display: flex;
-  flex-direction: column;
-  gap: 50px;
-  padding: 40px 20px;
-  align-items: center;
-}
-
-.carrusel {
-  display: flex;
-  gap: 15px;
-  align-items: center;
-}
-
-.carrusel img {
-  width: 260px;
-  border-radius: 18px;
-}
-
-video {
-  width: 100%;
-  border-radius: 16px;
-}
-
-.contador-final {
-  margin-top: 15px;
-  background: #300;
-  color: #ff8080;
-  padding: 10px;
-  border-radius: 12px;
-  font-family: monospace;
-}
-
-/* MOBILE */
-@media (max-width: 430px) {
-  .bloque-carta,
-  .cancion-dia,
-  .carta {
-    width: 100%;
-    max-width: 340px;
-  }
-}
-/* ===============================
-   AJUSTE SOBRE – MOBILE
-=================================*/
-
-@media (max-width: 430px) {
-
-  .bloque-carta {
-    padding-top: 55px; /* da aire al texto */
-  }
-
-  .solapa {
-    height: 40px;            /* antes era 60% */
-    top: -25px;              /* sube la solapa */
-    clip-path: polygon(0 100%, 50% 0, 100% 100%);
-  }
-
-  .bloque-carta.abierto .solapa {
-    transform: rotateX(180deg) translateY(-10px);
-  }
-
-}
-
 .numero-dia {
   position: absolute;
   top: 20px;
@@ -185,21 +108,54 @@ video {
   font-weight: bold;
   color: #b71c1c;
   writing-mode: vertical-rl;
-  text-orientation: mixed;
   opacity: 0.8;
 }
 
-.selector-cartas {
-  display: flex;
-  justify-content: center;
-  margin: 25px 0;
+/* GALERÍA */
+.galeria {
+  text-align: center;
+  margin: 40px 0;
 }
 
-.selector-cartas select {
-  width: 220px;
-  padding: 10px;
-  font-size: 16px;
-  border-radius: 10px;
+.carrusel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
 }
+
+.carrusel img {
+  width: 260px;
+  border-radius: 16px;
+}
+
+/* VIDEO */
+.bloque-video {
+  max-width: 340px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+video {
+  width: 100%;
+  border-radius: 16px;
+}
+
+.contador-final {
+  margin-top: 10px;
+  background: #400;
+  color: #ffcccc;
+  padding: 10px;
+  border-radius: 10px;
+  font-family: monospace;
+}
+
+/* MOBILE */
+@media (max-width: 430px) {
+  body {
+    font-size: 16px;
+  }
+}
+
 
 
