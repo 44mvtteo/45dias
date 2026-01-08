@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>45 días con usted 💗</title>
-
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -24,7 +23,6 @@
 <!-- CONTENIDO -->
 <div id="contenidoPrincipal" class="oculto">
 
-  <!-- PORTADA -->
   <section class="portada">
     <h1 class="titulo">45 días con usted 💗</h1>
 
@@ -32,7 +30,16 @@
       <p id="estadoCarta"></p>
       <span id="contadorDesbloqueo"></span>
     </div>
+
+    <div class="contador-final">
+      ⏳ Falta: <span id="contadorViaje"></span>
+    </div>
   </section>
+
+  <!-- SELECTOR -->
+  <div class="selector-cartas">
+    <select id="listaCartas"></select>
+  </div>
 
   <!-- CARTA -->
   <section id="seccionCarta" class="oculto">
@@ -40,6 +47,22 @@
       <div id="numeroDia" class="numero-dia"></div>
       <p id="contenidoCarta"></p>
     </div>
+  </section>
+
+  <!-- GALERÍA -->
+  <section class="galeria">
+    <h2>Nuestros momentos ✨</h2>
+    <div class="carrusel">
+      <button onclick="anterior()">‹</button>
+      <img id="imagenCarrusel">
+      <button onclick="siguiente()">›</button>
+    </div>
+  </section>
+
+  <!-- VIDEO -->
+  <section class="bloque-video">
+    <h2>Mensaje del día 💌</h2>
+    <video id="videoDiario" controls></video>
   </section>
 
 </div>
