@@ -4,14 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>45 días con usted 💗</title>
-
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- PASSWORD -->
 <div id="pantallaPassword" class="pantalla-password">
   <div class="password-box">
     <h1>45 días con usted 💗</h1>
@@ -21,33 +19,17 @@
   </div>
 </div>
 
-<!-- CONTENIDO -->
 <div id="contenidoPrincipal" class="oculto">
 
-  <!-- PORTADA -->
   <section class="portada">
     <h1 class="titulo">45 días con usted 💗</h1>
 
     <div id="bloqueCarta" class="bloque-carta">
-      <p id="estadoCarta">Cargando…</p>
+      <p id="estadoCarta"></p>
       <span id="contadorDesbloqueo"></span>
     </div>
   </section>
 
-  <!-- CANCIÓN -->
-  <section class="cancion-dia">
-    <p>🎵 Canción del día</p>
-    <h3 id="tituloCancion"></h3>
-    <p id="artistaCancion"></p>
-    <a id="linkCancion" target="_blank">Abrir en Spotify</a>
-  </section>
-
-  <!-- SELECTOR -->
-  <div class="selector-cartas">
-    <select id="listaCartas"></select>
-  </div>
-
-  <!-- CARTA -->
   <section id="seccionCarta" class="oculto">
     <div class="carta">
       <div id="numeroDia" class="numero-dia"></div>
@@ -55,25 +37,9 @@
     </div>
   </section>
 
-  <!-- GALERÍA -->
-  <section class="galeria">
-    <h2>Nuestros momentos ✨</h2>
-    <div class="carrusel">
-      <button onclick="anterior()">‹</button>
-      <img id="imagenCarrusel" alt="Nuestros momentos">
-      <button onclick="siguiente()">›</button>
-    </div>
-  </section>
-
-  <!-- VIDEO -->
-  <section class="bloque-video">
-    <h2>Mensaje del día 💌</h2>
-    <p id="textoVideo"></p>
-    <video id="videoDiario" controls playsinline></video>
-
-    <div class="contador-final">
-      ⏳ <span id="contadorFinal"></span>
-    </div>
-  </section>
-
 </div>
+
+<script src="script.js"></script>
+</body>
+</html>
+
