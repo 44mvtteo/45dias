@@ -7,7 +7,6 @@ body {
 
 .oculto { display: none; }
 
-/* PASSWORD */
 .pantalla-password {
   height: 100vh;
   display: flex;
@@ -20,11 +19,10 @@ body {
   padding: 40px;
   border-radius: 20px;
   text-align: center;
-  width: 90%;
   max-width: 320px;
+  width: 90%;
 }
 
-/* PORTADA */
 .portada {
   text-align: center;
   padding: 40px 20px;
@@ -34,7 +32,6 @@ body {
   font-size: 2.2em;
 }
 
-/* BOTÓN CARTA */
 .bloque-carta {
   background: white;
   padding: 20px;
@@ -45,7 +42,6 @@ body {
   box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
 
-/* CANCIÓN */
 .cancion-dia {
   background: white;
   padding: 20px;
@@ -55,34 +51,32 @@ body {
   text-align: center;
 }
 
-/* SELECTOR */
 .selector-cartas {
   display: flex;
   justify-content: center;
-  margin: 25px 0;
+  margin: 20px;
 }
 
 .selector-cartas select {
-  width: 220px;
   padding: 10px;
   font-size: 16px;
-  border-radius: 10px;
 }
 
-/* CARTA CUADERNO */
+#contenidoCarta {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
 .carta {
-  background: repeating-linear-gradient(
-    white,
-    white 26px,
-    #ddd 27px
-  );
+  background: repeating-linear-gradient(white, white 26px, #ddd 27px);
   max-width: 340px;
   min-height: 550px;
-  margin: 30px auto;
+  margin: 0 auto;
   padding: 50px 35px;
   border-radius: 12px;
-  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
   line-height: 27px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
   position: relative;
 }
 
@@ -96,72 +90,19 @@ body {
   background: #e57373;
 }
 
-.carta p {
-  white-space: pre-line;
-}
-
 .numero-dia {
   position: absolute;
   top: 20px;
   left: 15px;
-  font-size: 14px;
   font-weight: bold;
-  color: #b71c1c;
   writing-mode: vertical-rl;
-  opacity: 0.8;
+  color: #b71c1c;
 }
 
-/* GALERÍA */
-.galeria {
-  text-align: center;
-  margin: 40px 0;
+.carta p {
+  white-space: pre-line;
 }
 
-.carrusel {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 15px;
-}
-
-.carrusel img {
-  width: 260px;
-  border-radius: 16px;
-}
-
-/* VIDEO */
-.bloque-video {
-  max-width: 340px;
-  margin: 40px auto;
-  text-align: center;
-}
-
-video {
-  width: 100%;
-  border-radius: 16px;
-}
-
-.contador-final {
-  margin-top: 10px;
-  background: #400;
-  color: #ffcccc;
-  padding: 10px;
-  border-radius: 10px;
-  font-family: monospace;
-}
-
-/* MOBILE */
-@media (max-width: 430px) {
-  body {
-    font-size: 16px;
-  }
-}
-
-#contenidoCarta {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-}
 
 
 
