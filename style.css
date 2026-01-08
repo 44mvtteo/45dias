@@ -5,7 +5,9 @@ body {
   color: #222;
 }
 
-.oculto { display: none; }
+.oculto {
+  display: none;
+}
 
 /* PASSWORD */
 .pantalla-password {
@@ -22,6 +24,19 @@ body {
   text-align: center;
   width: 90%;
   max-width: 320px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.password-box input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.password-box button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  cursor: pointer;
 }
 
 /* PORTADA */
@@ -34,7 +49,7 @@ body {
   font-size: 2.2em;
 }
 
-/* BOTÓN CARTA */
+/* BLOQUE CARTA */
 .bloque-carta {
   background: white;
   padding: 20px;
@@ -45,31 +60,7 @@ body {
   box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
 
-/* CANCIÓN */
-.cancion-dia {
-  background: white;
-  padding: 20px;
-  border-radius: 16px;
-  max-width: 320px;
-  margin: 20px auto;
-  text-align: center;
-}
-
-/* SELECTOR */
-.selector-cartas {
-  display: flex;
-  justify-content: center;
-  margin: 25px 0;
-}
-
-.selector-cartas select {
-  width: 220px;
-  padding: 10px;
-  font-size: 16px;
-  border-radius: 10px;
-}
-
-/* CARTA CUADERNO */
+/* CARTA */
 .carta {
   background: repeating-linear-gradient(
     white,
@@ -77,7 +68,7 @@ body {
     #ddd 27px
   );
   max-width: 340px;
-  min-height: 550px;
+  min-height: 520px;
   margin: 30px auto;
   padding: 50px 35px;
   border-radius: 12px;
@@ -109,45 +100,6 @@ body {
   color: #b71c1c;
   writing-mode: vertical-rl;
   opacity: 0.8;
-}
-
-/* GALERÍA */
-.galeria {
-  text-align: center;
-  margin: 40px 0;
-}
-
-.carrusel {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 15px;
-}
-
-.carrusel img {
-  width: 260px;
-  border-radius: 16px;
-}
-
-/* VIDEO */
-.bloque-video {
-  max-width: 340px;
-  margin: 40px auto;
-  text-align: center;
-}
-
-video {
-  width: 100%;
-  border-radius: 16px;
-}
-
-.contador-final {
-  margin-top: 10px;
-  background: #400;
-  color: #ffcccc;
-  padding: 10px;
-  border-radius: 10px;
-  font-family: monospace;
 }
 
 /* MOBILE */
