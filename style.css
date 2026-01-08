@@ -20,8 +20,8 @@ body {
   padding: 40px;
   border-radius: 20px;
   text-align: center;
-  max-width: 320px;
   width: 90%;
+  max-width: 320px;
 }
 
 /* PORTADA */
@@ -69,7 +69,7 @@ body {
   border-radius: 10px;
 }
 
-/* CARTA */
+/* CARTA CUADERNO */
 .carta {
   background: repeating-linear-gradient(
     white,
@@ -81,8 +81,8 @@ body {
   margin: 30px auto;
   padding: 50px 35px;
   border-radius: 12px;
-  line-height: 27px;
   box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+  line-height: 27px;
   position: relative;
 }
 
@@ -104,9 +104,11 @@ body {
   position: absolute;
   top: 20px;
   left: 15px;
+  font-size: 14px;
   font-weight: bold;
-  writing-mode: vertical-rl;
   color: #b71c1c;
+  writing-mode: vertical-rl;
+  opacity: 0.8;
 }
 
 /* GALERÍA */
@@ -146,4 +148,11 @@ video {
   padding: 10px;
   border-radius: 10px;
   font-family: monospace;
+}
+
+/* MOBILE */
+@media (max-width: 430px) {
+  body {
+    font-size: 16px;
+  }
 }
