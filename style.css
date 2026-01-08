@@ -7,6 +7,7 @@ body {
 
 .oculto { display: none; }
 
+/* PASSWORD */
 .pantalla-password {
   height: 100vh;
   display: flex;
@@ -23,6 +24,7 @@ body {
   width: 90%;
 }
 
+/* PORTADA */
 .portada {
   text-align: center;
   padding: 40px 20px;
@@ -32,6 +34,7 @@ body {
   font-size: 2.2em;
 }
 
+/* BOTÓN CARTA */
 .bloque-carta {
   background: white;
   padding: 20px;
@@ -42,6 +45,7 @@ body {
   box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
 
+/* CANCIÓN */
 .cancion-dia {
   background: white;
   padding: 20px;
@@ -51,28 +55,30 @@ body {
   text-align: center;
 }
 
+/* SELECTOR */
 .selector-cartas {
   display: flex;
   justify-content: center;
-  margin: 20px;
+  margin: 25px 0;
 }
 
 .selector-cartas select {
+  width: 220px;
   padding: 10px;
   font-size: 16px;
+  border-radius: 10px;
 }
 
-#contenidoCarta {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-}
-
+/* CARTA */
 .carta {
-  background: repeating-linear-gradient(white, white 26px, #ddd 27px);
+  background: repeating-linear-gradient(
+    white,
+    white 26px,
+    #ddd 27px
+  );
   max-width: 340px;
   min-height: 550px;
-  margin: 0 auto;
+  margin: 30px auto;
   padding: 50px 35px;
   border-radius: 12px;
   line-height: 27px;
@@ -90,6 +96,10 @@ body {
   background: #e57373;
 }
 
+.carta p {
+  white-space: pre-line;
+}
+
 .numero-dia {
   position: absolute;
   top: 20px;
@@ -99,10 +109,41 @@ body {
   color: #b71c1c;
 }
 
-.carta p {
-  white-space: pre-line;
+/* GALERÍA */
+.galeria {
+  text-align: center;
+  margin: 40px 0;
 }
 
+.carrusel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
 
+.carrusel img {
+  width: 260px;
+  border-radius: 16px;
+}
 
+/* VIDEO */
+.bloque-video {
+  max-width: 340px;
+  margin: 40px auto;
+  text-align: center;
+}
 
+video {
+  width: 100%;
+  border-radius: 16px;
+}
+
+.contador-final {
+  margin-top: 10px;
+  background: #400;
+  color: #ffcccc;
+  padding: 10px;
+  border-radius: 10px;
+  font-family: monospace;
+}
