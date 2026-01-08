@@ -131,3 +131,18 @@ body {
   100% { transform: scale(1);   box-shadow: 0 0 8px rgba(255,0,0,0.5); }
 }
 
+.carrusel img {
+  width: 100%;
+  max-width: 240px;
+  height: auto;
+  border-radius: 14px;
+}
+
+.carrusel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+
