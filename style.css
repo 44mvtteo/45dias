@@ -145,4 +145,14 @@ body {
   gap: 12px;
 }
 
+.carrusel button {
+  background: #ffffffcc;
+  border: none;
+  font-size: 22px;
+  padding: 6px 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
 
