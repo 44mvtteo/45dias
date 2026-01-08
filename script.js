@@ -90,11 +90,16 @@ function abrirCarta(dia) {
 function actualizarViaje() {
   const d = FECHA_REENCUENTRO - new Date();
   const s = Math.floor(d / 1000);
+
+  const dias = Math.floor(s / 86400);
+  const horas = Math.floor((s % 86400) / 3600);
+  const minutos = Math.floor((s % 3600) / 60);
+  const segundos = s % 60;
+
   contadorViaje.innerText =
-    Math.floor(s / 86400) + "d " +
-    Math.floor((s % 86400) / 3600) + "h " +
-    Math.floor((s % 3600) / 60) + "m";
+    `${dias}d ${horas}h ${minutos}m ${segundos}s`;
 }
+
 
 /* CARRUSEL */
 const fotos = ["imagenes/foto1.jpg","imagenes/foto2.jpg","imagenes/foto3.jpg"];
@@ -111,3 +116,4 @@ function anterior() {
   indice = (indice - 1 + fotos.length) % fotos.length;
   mostrarFoto();
 }
+
