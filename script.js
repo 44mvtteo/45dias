@@ -1,55 +1,29 @@
 const PASSWORD = "1308";
 
 const FECHA_INICIO = new Date("2026-01-09T09:00:00-03:00");
+const FECHA_ENCUENTRO = new Date("2026-02-22T00:00:00-03:00");
 
-const cartas = [
-  ["Aquí escribes la carta del día 1"],
-  ["Aquí escribes la carta del día 2"],
-  ["Aquí escribes la carta del día 3"],
-  ["Aquí escribes la carta del día 4"],
-  ["Aquí escribes la carta del día 5"],
-  ["Aquí escribes la carta del día 6"],
-  ["Aquí escribes la carta del día 7"],
-  ["Aquí escribes la carta del día 8"],
-  ["Aquí escribes la carta del día 9"],
-  ["Aquí escribes la carta del día 10"],
-  ["Aquí escribes la carta del día 11"],
-  ["Aquí escribes la carta del día 12"],
-  ["Aquí escribes la carta del día 13"],
-  ["Aquí escribes la carta del día 14"],
-  ["Aquí escribes la carta del día 15"],
-  ["Aquí escribes la carta del día 16"],
-  ["Aquí escribes la carta del día 17"],
-  ["Aquí escribes la carta del día 18"],
-  ["Aquí escribes la carta del día 19"],
-  ["Aquí escribes la carta del día 20"],
-  ["Aquí escribes la carta del día 21"],
-  ["Aquí escribes la carta del día 22"],
-  ["Aquí escribes la carta del día 23"],
-  ["Aquí escribes la carta del día 24"],
-  ["Aquí escribes la carta del día 25"],
-  ["Aquí escribes la carta del día 26"],
-  ["Aquí escribes la carta del día 27"],
-  ["Aquí escribes la carta del día 28"],
-  ["Aquí escribes la carta del día 29"],
-  ["Aquí escribes la carta del día 30"],
-  ["Aquí escribes la carta del día 31"],
-  ["Aquí escribes la carta del día 32"],
-  ["Aquí escribes la carta del día 33"],
-  ["Aquí escribes la carta del día 34"],
-  ["Aquí escribes la carta del día 35"],
-  ["Aquí escribes la carta del día 36"],
-  ["Aquí escribes la carta del día 37"],
-  ["Aquí escribes la carta del día 38"],
-  ["Aquí escribes la carta del día 39"],
-  ["Aquí escribes la carta del día 40"],
-  ["Aquí escribes la carta del día 41"],
-  ["Aquí escribes la carta del día 42"],
-  ["Aquí escribes la carta del día 43"],
-  ["Aquí escribes la carta del día 44"],
-  ["Aquí escribes la carta del día 45"]
-];
+const cartas = Array.from({ length: 45 }, (_, i) =>
+  `Aquí escribes la carta del día ${i + 1}.`
+);
 
+const canciones = Array.from({ length: 45 }, () => ({
+  titulo: "Te Amo",
+  artista: "Franco De Vita",
+  link: "https://open.spotify.com/"
+}));
+
+const mensajesVideo = Array.from({ length: 45 }, () =>
+  "Hoy quería decirle…"
+);
+
+const fotos = [];
+for (let i = 1; i <= 50; i++) {
+  fotos.push(`imagenes/foto${i}.jpg`);
+}
+let indice = 0;
+
+/* PASSWORD */
 function verificarPassword() {
   if (inputPassword.value !== PASSWORD) {
     errorPassword.innerText = "Contraseña incorrecta";
@@ -60,13 +34,19 @@ function verificarPassword() {
   iniciar();
 }
 
+/* INICIO */
 function iniciar() {
   actualizarCarta();
   construirSelector();
+  cargarContenido();
+  mostrarFoto();
+  setInterval(actualizarCarta, 60000);
 }
 
+/* CARTA */
 function actualizarCarta() {
   const diff = FECHA_INICIO - new Date();
+
   if (diff > 0) {
     estadoCarta.innerText = "La carta se abre en:";
     contadorDesbloqueo.innerText =
@@ -78,36 +58,27 @@ function actualizarCarta() {
     contadorDesbloqueo.innerText = "";
     bloqueCarta.onclick = () => abrirCarta(diaActual());
   }
+
+  actualizarContadorFinal();
 }
 
 function diaActual() {
-  return Math.floor((new Date() - FECHA_INICIO) / 86400000);
+  return Math.max(
+    0,
+    Math.floor((new Date() - FECHA_INICIO) / 86400000)
+  );
 }
 
 function abrirCarta(dia) {
   seccionCarta.classList.remove("oculto");
-  contenidoCarta.innerHTML = "";
-
-  cartas[dia].forEach((texto, i) => {
-    const hoja = document.createElement("div");
-    hoja.className = "carta";
-
-    const diaLabel = document.createElement("div");
-    diaLabel.className = "numero-dia";
-    diaLabel.innerText = `DÍA ${dia + 1}`;
-
-    const p = document.createElement("p");
-    p.innerText = texto;
-
-    hoja.appendChild(diaLabel);
-    hoja.appendChild(p);
-    contenidoCarta.appendChild(hoja);
-  });
+  numeroDia.innerText = `DÍA ${dia + 1}`;
+  contenidoCarta.innerText = cartas[dia];
 }
 
+/* SELECTOR */
 function construirSelector() {
   listaCartas.innerHTML = "";
-  for (let i = 0; i < cartas.length; i++) {
+  for (let i = 0; i < 45; i++) {
     const f = new Date(FECHA_INICIO);
     f.setDate(f.getDate() + i);
     const opt = document.createElement("option");
@@ -118,3 +89,38 @@ function construirSelector() {
   }
   listaCartas.onchange = () => abrirCarta(listaCartas.value);
 }
+
+/* CONTENIDO */
+function cargarContenido() {
+  const dia = diaActual();
+  tituloCancion.innerText = canciones[dia].titulo;
+  artistaCancion.innerText = canciones[dia].artista;
+  linkCancion.href = canciones[dia].link;
+  textoVideo.innerText = mensajesVideo[dia];
+  videoDiario.src = `videos/video${dia + 1}.mp4`;
+}
+
+/* CONTADOR FINAL */
+function actualizarContadorFinal() {
+  const d = FECHA_ENCUENTRO - new Date();
+  const s = Math.floor(d / 1000);
+  contadorFinal.innerText =
+    Math.floor(s / 86400) + "d " +
+    Math.floor((s % 86400) / 3600) + "h " +
+    Math.floor((s % 3600) / 60) + "m " +
+    (s % 60) + "s";
+}
+
+/* CARRUSEL */
+function mostrarFoto() {
+  imagenCarrusel.src = fotos[indice];
+}
+function siguiente() {
+  indice = (indice + 1) % fotos.length;
+  mostrarFoto();
+}
+function anterior() {
+  indice = (indice - 1 + fotos.length) % fotos.length;
+  mostrarFoto();
+}
+
