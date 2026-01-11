@@ -28,8 +28,17 @@ De verdad quiero que lo nuestro funcione, hoy, mañana y por siempre. La amo muc
 
 9 de enero
 09:52 ",
-  "Carta día 2.\n\nAquí escribes la carta completa del día 2.",
-  "Carta día 3.\n\nAquí escribes la carta completa del día 3.",
+  "Dia 2
+Holaa mi vida hoy es el dia dos de 45, lee escribo esto mientras espero a bajarme del avión porque ya llegue siendo las 5:03 de la mañana hora chile peroo aca en españa son las 9 de la mañana. La extraño muchísimo no sabe cuanto la he pensado. Su carta me emociono mucho y funcionó lo que usted queria, llore y también vivi mi momento de película. No sabe la falta que me hace pero lo único que quiero es que estemos bien estos 45 dias. Lamentablemente no tengo como darle mantenimiento a la página asi que espero que cuando llegue a la casa encuentre la solución, ahora me esperan 5 horas de viaje en auto hacia sevilla y bueno quizas cuando usted lea esto yo ya estaré llegando. La amo mucho amor mio espero que este bien y espero que estemos bien, y tambien espero que me haya hablado mucho porque o si no me voy a enojarrr jejeje. La amo mucho mi amorcito 
+Por siempre❤️‍🩹
+
+10 de enero
+05:05 ",
+  "DIA 3
+Buen dia wawita linda o mejor dicho ya buenas tardes, esta carta va con retraso porque como tuve que salir se me fue el tiempo de las horas y como ya sabe no he podido arreglar la pagina pero creo que fue un error temporal. Hoy fui a comer a un lugar que se llama La salá pero no sala de estar salá de sal o salada KSKSKSKS nombres de mierdaa, y comi carne mechada con salsa de tomate y papas fritas y tome La casera de limón que es como la limón soda pero de españa. Ahora me encuentro en la sala de musica de mi prima cantando como si fuera experto mientras usted está tutito en la casa de esa weona. La extraño mucho amorcito mio ya quiero que llegue a su casita y podamos hacer llamada tranquilitosss jejeje. No sabe la falta que me hace y lo mucho que me gustaría que estuviera aqui conmigo mi amor. Eso pue espero que la haya pasado bien y que la siga pasando bien alla yo seguiré escuchando a mi prima tocar porque me duele la garganta de lo mal que canto, la amo mucho amorcito mio, por siempre♾️💘
+
+11 de enero
+12:59 ",
   "Carta día 4.\n\nAquí escribes la carta completa del día 4.",
   "Carta día 5.\n\nAquí escribes la carta completa del día 5.",
   "Carta día 6.\n\nAquí escribes la carta completa del día 6.",
@@ -224,4 +233,5 @@ function anterior() {
   indice = (indice - 1 + fotos.length) % fotos.length;
   mostrarFoto();
 }
+
 
