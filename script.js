@@ -1,14 +1,83 @@
+/*************************************************
+ * CONFIGURACIÓN GENERAL
+ *************************************************/
+
 const PASSWORD = "1308";
 
 const FECHA_INICIO = new Date("2026-01-09T09:00:00-03:00");
 const FECHA_REENCUENTRO = new Date("2026-02-22T00:00:00-03:00");
 
-const cartas = Array.from({ length: 45 }, (_, i) =>
-  `Carta del día ${i + 1}.
-Aquí escribes el contenido real.`
-);
+/*************************************************
+ * 📩 CARTAS (AQUÍ ES DONDE ESCRIBES LAS 45 CARTAS)
+ *************************************************
+ *
+ * 👉 IMPORTANTE:
+ * - Deben ser EXACTAMENTE 45 textos
+ * - El orden importa: índice 0 = día 1
+ * - Usa \n para saltos de línea
+ *
+ * Ejemplo:
+ * "Texto línea 1\n\nTexto línea 2"
+ *
+ *************************************************/
 
-/* DOM */
+const cartas = [
+  "Dia 1
+Bueno mi amor este es el dia uno de 45 dias donde mi idea era ponerle la carta en la pagina y que la viera ahi pero como yo siempre supuse, la pagina se cayó. Me encantaria arreglarla pero ya me andan gritoniando para que me apure, lamento mucho que no este funcionando pero le prometo que cuando llegue a la casa en españa arreglaré todo lo posible y subiré cada carta que escribo al momento. Hoy dia es 9 de enero, un dia bastante triste para ser verano y estan soleado, aun nisiquiera salgo de mi casa pero cada vez su ausencia pesa mas. Ninguno de los dos contaba con que discutiriamos pero paso y solo me queda pedirle perdon al igual que usted a mi. No tienen que ser asi las cosas, podemos estar bien, felices, amorosos, incluso si no nos podemos ver. 
+De verdad quiero que lo nuestro funcione, hoy, mañana y por siempre. La amo mucho mi amor espero que hoy sea un buen día en lo que se pueda y recuerde que en todo momento estaré pensandola. La amo muchísimo mi amor❤️‍🩹.
+
+9 de enero
+09:52 ",
+  "Carta día 2.\n\nAquí escribes la carta completa del día 2.",
+  "Carta día 3.\n\nAquí escribes la carta completa del día 3.",
+  "Carta día 4.\n\nAquí escribes la carta completa del día 4.",
+  "Carta día 5.\n\nAquí escribes la carta completa del día 5.",
+  "Carta día 6.\n\nAquí escribes la carta completa del día 6.",
+  "Carta día 7.\n\nAquí escribes la carta completa del día 7.",
+  "Carta día 8.\n\nAquí escribes la carta completa del día 8.",
+  "Carta día 9.\n\nAquí escribes la carta completa del día 9.",
+  "Carta día 10.\n\nAquí escribes la carta completa del día 10.",
+  "Carta día 11.\n\nAquí escribes la carta completa del día 11.",
+  "Carta día 12.\n\nAquí escribes la carta completa del día 12.",
+  "Carta día 13.\n\nAquí escribes la carta completa del día 13.",
+  "Carta día 14.\n\nAquí escribes la carta completa del día 14.",
+  "Carta día 15.\n\nAquí escribes la carta completa del día 15.",
+  "Carta día 16.\n\nAquí escribes la carta completa del día 16.",
+  "Carta día 17.\n\nAquí escribes la carta completa del día 17.",
+  "Carta día 18.\n\nAquí escribes la carta completa del día 18.",
+  "Carta día 19.\n\nAquí escribes la carta completa del día 19.",
+  "Carta día 20.\n\nAquí escribes la carta completa del día 20.",
+  "Carta día 21.\n\nAquí escribes la carta completa del día 21.",
+  "Carta día 22.\n\nAquí escribes la carta completa del día 22.",
+  "Carta día 23.\n\nAquí escribes la carta completa del día 23.",
+  "Carta día 24.\n\nAquí escribes la carta completa del día 24.",
+  "Carta día 25.\n\nAquí escribes la carta completa del día 25.",
+  "Carta día 26.\n\nAquí escribes la carta completa del día 26.",
+  "Carta día 27.\n\nAquí escribes la carta completa del día 27.",
+  "Carta día 28.\n\nAquí escribes la carta completa del día 28.",
+  "Carta día 29.\n\nAquí escribes la carta completa del día 29.",
+  "Carta día 30.\n\nAquí escribes la carta completa del día 30.",
+  "Carta día 31.\n\nAquí escribes la carta completa del día 31.",
+  "Carta día 32.\n\nAquí escribes la carta completa del día 32.",
+  "Carta día 33.\n\nAquí escribes la carta completa del día 33.",
+  "Carta día 34.\n\nAquí escribes la carta completa del día 34.",
+  "Carta día 35.\n\nAquí escribes la carta completa del día 35.",
+  "Carta día 36.\n\nAquí escribes la carta completa del día 36.",
+  "Carta día 37.\n\nAquí escribes la carta completa del día 37.",
+  "Carta día 38.\n\nAquí escribes la carta completa del día 38.",
+  "Carta día 39.\n\nAquí escribes la carta completa del día 39.",
+  "Carta día 40.\n\nAquí escribes la carta completa del día 40.",
+  "Carta día 41.\n\nAquí escribes la carta completa del día 41.",
+  "Carta día 42.\n\nAquí escribes la carta completa del día 42.",
+  "Carta día 43.\n\nAquí escribes la carta completa del día 43.",
+  "Carta día 44.\n\nAquí escribes la carta completa del día 44.",
+  "Carta día 45.\n\nEste es el cierre del viaje."
+];
+
+/*************************************************
+ * DOM
+ *************************************************/
+
 const inputPassword = document.getElementById("inputPassword");
 const pantallaPassword = document.getElementById("pantallaPassword");
 const contenidoPrincipal = document.getElementById("contenidoPrincipal");
@@ -27,7 +96,20 @@ const imagenCarrusel = document.getElementById("imagenCarrusel");
 const videoDiario = document.getElementById("videoDiario");
 const contadorViaje = document.getElementById("contadorViaje");
 
-/* LOGIN */
+/*************************************************
+ * UTILIDAD: DÍA ACTUAL (0 a 44)
+ *************************************************/
+
+function obtenerDiaActual() {
+  const diff = new Date() - FECHA_INICIO;
+  const dia = Math.floor(diff / 86400000);
+  return Math.min(Math.max(dia, 0), 44);
+}
+
+/*************************************************
+ * LOGIN
+ *************************************************/
+
 function verificarPassword() {
   if (inputPassword.value !== PASSWORD) {
     errorPassword.innerText = "Contraseña incorrecta";
@@ -38,7 +120,10 @@ function verificarPassword() {
   iniciar();
 }
 
-/* INICIO */
+/*************************************************
+ * INICIO
+ *************************************************/
+
 function iniciar() {
   construirSelector();
   actualizarCarta();
@@ -46,38 +131,50 @@ function iniciar() {
   mostrarFoto();
 }
 
-/* CARTA */
+/*************************************************
+ * CARTA DEL DÍA
+ *************************************************/
+
 function actualizarCarta() {
-  const ahora = new Date();
-  const diff = FECHA_INICIO - ahora;
+  const diff = FECHA_INICIO - new Date();
 
   if (diff > 0) {
     estadoCarta.innerText = "La carta se abre en:";
     contadorDesbloqueo.innerText =
       Math.floor(diff / 3600000) + "h " +
       Math.floor((diff % 3600000) / 60000) + "m";
+    bloqueCarta.onclick = null;
   } else {
     estadoCarta.innerText = "Presione para leer la carta 💌";
     contadorDesbloqueo.innerText = "";
+    bloqueCarta.onclick = () => abrirCarta(obtenerDiaActual());
   }
 
   actualizarViaje();
 }
 
-/* SELECTOR */
+/*************************************************
+ * SELECTOR DE CARTAS
+ *************************************************/
+
 function construirSelector() {
   listaCartas.innerHTML = "";
+  const hoy = obtenerDiaActual();
+
   for (let i = 0; i < 45; i++) {
-    const f = new Date(FECHA_INICIO);
-    f.setDate(f.getDate() + i);
     const opt = document.createElement("option");
     opt.value = i;
-    opt.text = new Date() >= f ? `Carta ${i + 1}` : `🔒 Carta ${i + 1}`;
-    opt.disabled = new Date() < f;
+    opt.text = i <= hoy ? `Carta ${i + 1}` : `🔒 Carta ${i + 1}`;
+    opt.disabled = i > hoy;
     listaCartas.appendChild(opt);
   }
+
   listaCartas.onchange = () => abrirCarta(listaCartas.value);
 }
+
+/*************************************************
+ * ABRIR CARTA
+ *************************************************/
 
 function abrirCarta(dia) {
   seccionCarta.classList.remove("oculto");
@@ -86,10 +183,12 @@ function abrirCarta(dia) {
   videoDiario.src = `videos/video${Number(dia) + 1}.mp4`;
 }
 
-/* CONTADOR VIAJE */
+/*************************************************
+ * CONTADOR REENCUENTRO
+ *************************************************/
+
 function actualizarViaje() {
-  const d = FECHA_REENCUENTRO - new Date();
-  const s = Math.floor(d / 1000);
+  const s = Math.floor((FECHA_REENCUENTRO - new Date()) / 1000);
 
   const dias = Math.floor(s / 86400);
   const horas = Math.floor((s % 86400) / 3600);
@@ -100,18 +199,27 @@ function actualizarViaje() {
     `${dias}d ${horas}h ${minutos}m ${segundos}s`;
 }
 
+/*************************************************
+ * CARRUSEL
+ *************************************************/
 
-/* CARRUSEL */
-const fotos = ["imagenes/foto1.jpg","imagenes/foto2.jpg","imagenes/foto3.jpg"];
+const fotos = [
+  "imagenes/foto1.jpg",
+  "imagenes/foto2.jpg",
+  "imagenes/foto3.jpg"
+];
+
 let indice = 0;
 
 function mostrarFoto() {
   imagenCarrusel.src = fotos[indice];
 }
+
 function siguiente() {
   indice = (indice + 1) % fotos.length;
   mostrarFoto();
 }
+
 function anterior() {
   indice = (indice - 1 + fotos.length) % fotos.length;
   mostrarFoto();
