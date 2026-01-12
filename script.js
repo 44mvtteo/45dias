@@ -42,7 +42,14 @@ Buen dia wawita linda o mejor dicho ya buenas tardes, esta carta va con retraso 
 11 de enero
 12:59`,
 
-  `Carta día 4.`,
+  `Dia 4
+Buen dia amorcito mio hoy es el dia cuatro de 45, me levante con ánimos y estoy listo para ir al gimnasio aunque todavía falta ya que es a las 1 y aca son recién las 11:40 pero mi tía tiene que hacer tramites así que la acompañare. No sabe el frío que tengo incluso con ropa deportiva, tampoco es que sea la mas abrigadora pero en Chile yo me cago de calor ocupando esto y aca me cago de frio. Hoy de desayuno tome pancito con queso y jamón y una leche con chocolate que quedo muy rica, nose que hare en la tarde ya que mi prima tienes clases de batería y nose que mas, yo habia propuesto ir al Lagoh, que es un mall muy grande con muchas tiendas es como un parque arauco o un alto las condes, ahi estan mis 4 tiendas favoritas 
+Bershka, Pull and Bear, Newyorker y Lefties. Quiero ir a verlas para que ver si tienen buena ropa en una de esas me gasto mi fortuna de 100 lukas ahi KSKSKSKSKS, aunque mi prima me dijo que en las tiendas de segunda mano tambien hay buena ropa, asi que espero también ir a ver las tiendas de segunda mano. Ya finalizando esta cartita espero que tenga un excelente dia donde podamos hablar harto y reírnos harto, apenas despierte y yo tenga Internet le hablare amorcito mio. La amo mucho mi wawi hemosha mucho beshitosss, 
+por siempree♾️💕
+
+12 de enero
+07:44 (hora Chile)`,
+
   `Carta día 5.`,
   `Carta día 6.`,
   `Carta día 7.`,
