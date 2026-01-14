@@ -50,12 +50,12 @@ por siempree♾️💕
 12 de enero
 07:44 (hora Chile)`,
 
-  `Dia 5
+  ` Dia 5
 Pensó que no habria carta hoy, bueno pues se equivoca, no me salto ningun dia y no tendra vacía ninguna cartita. Hoy mi amor es un dia muy especial ya que se cumplen 4 meses de que me dijo que si, un momento tan bonito y único que llevo cada dia de mi vida, incluso lo recuerdo como si hubiera sido ayer, ese dia fue tan bonito aunque empezo como las weas por culpa de sebita y sus mañas pero bueno. La pasamos tan bien despues de que se desenojo yo ya estaba estresandome ya pero gracias a dios salio como queria, llegamos a las dunas de concon (ojalá hubiera sido al atardecer mismo) y le pedi si podia ser su pololo. En el camino de vuelta me sentía tan feliz y tan completo, como nunca antes en la vida, sentí que todo mi esfuerzo valió la pena y asi llegamos hasta hoy, un buen dia aunque hayamos peleado, se que podemos arreglarnos y estar bien, ambos reaccionamos mal y bueno solo queda hablar las cosas y calmarnos aunque se que sigue enojada. Esto lo escribo mientras hago popo y hablo con usted pero aun no le diré porque claramente no es el momento, solo quiero que sepa que la amo mucho y que usted es mi absoluto todo. Agradezco cada segundo a su lado, agradezco poder hacerme llamar su pololo y agradezco poder decirle mi amor, y que usted me lo diga a mi es el sentimiento mas reconfortante del mundo. Tenemos problemas como cualquier relación pero se que nuestro amor es mas grande y podremos solucionar esto. La amo mucho amor mio, por siempre❤️‍🩹♾️
 
 13 de Enero
-14:26 ( dos y media hora chile)
-.`,
+14:26 ( dos y media hora chile).`
+
   `Carta día 6.`,
   `Carta día 7.`,
   `Carta día 8.`,
