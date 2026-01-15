@@ -56,8 +56,31 @@ Pensó que no habria carta hoy, bueno pues se equivoca, no me salto ningun dia y
 13 de Enero
 14:26 ( dos y media hora chile).`,
 
-  `Carta día 6.`,
-  `Carta día 7.`,
+  `Dia 6
+Holaa mi amor hoy es el dia 6 de 45, me desperte muy contento, soñé con usted, soñé que estaba aca conmigo, que veíamos películas, que estábamos bien abrazaditos y que en una usted se subía encima mio, me encanta la tierno que somos y como siempre algo caliente tiene que pasar me gusta mucho esa conexión o esa confianza en ese sentido. Hoy nose que hare, me vengo recién levantando y aunque me hubiera gustado dormir en llamada con usted, su celu esta malo☹️. Me gusta que hablemos me gusta que nos demos atencion, creo que eso me mantiene cuerdo y aun no caigo en la locura, o quizas si?. Es bromaa, mis únicos síntomas de locura es el inmenso amor que le tengo y las cosas que haría por usted , usted me hace muy feliz sabe, me hace el weon mas feliz y no sabe como se lo agradezco, amo su amor, amo sus gestos, su atención, su confianza amo todo de usted y quiero amarlo por muchos años mas. La amo mucho amor mio me voy a tomar desayuno ya que mi tía fue a jugar papel a no ser que me vuelva a quedar dormido que es probable. La amo muchito wawi, por siempre♾️💕
+
+14 de enero
+6:44 (hora chile)
+
+
+
+
+
+
+
+
+
+
+
+`,
+  `Dia 7
+Buenos días mi amor hoy es el dia 7 y siendo las 9 y cuarto vengo a escribirle la carta. Siento que estamos mejor pero aun asi faltan cosas por hablar, se que quiere arreglar las cosas y dejar de estar mal pero no sabe el miedo constante que tengo  dia a dia de que me termine, eso pienso cada dia y no quiero que sea asi, no quiero perderla y siempre elegiré el camino del diálogo con usted. Me hace mucha falta y solo quiero un abrazo de usted, solo quiero que arreglemos lo nuestro y hagamos todo lo que queríamos, perdón por mis malas actitudes, se que he reaccionado mal y dejaran de ser asi las cosas. Haría todo por usted eso téngalo claro y yo solo quiero cuidar lo nuestro porque la amo mucho y no quiero perderla. Se que a lo mejor estamos mejor que ayer en la noche pero el sueño me dejo muy mal sinceramente, y no puedo nisiquiera imaginar volver a estar sin usted. Arreglemos bien las cosas y en persona ya las arreglamos del todo, no nos perdamos y seamos felices mutuamente. La amo muchísimo mi amor hoy mañana
+ y siempre❤️‍🩹♾️
+
+15 de enero
+9:21
+
+`,
   `Carta día 8.`,
   `Carta día 9.`,
   `Carta día 10.`,
