@@ -8,18 +8,21 @@
 <body>
 
 <!-- PORTADA CONTRASEÑA -->
-<div id="pantallaPassword">
-  <input type="password" id="inputPassword" placeholder="Contraseña">
-  <button id="btnEntrar">Entrar</button>
-  <div id="errorPassword" style="color:red;"></div>
+<div id="pantallaPassword" class="pantalla-password">
+  <div class="password-box">
+    <h2>Ingrese contraseña 💌</h2>
+    <input type="password" id="inputPassword" placeholder="Contraseña">
+    <button id="btnEntrar">Entrar</button>
+    <div id="errorPassword" style="color:red; margin-top:10px;"></div>
+  </div>
 </div>
 
 <!-- CONTENIDO PRINCIPAL -->
 <div id="contenidoPrincipal" class="oculto">
 
   <!-- BLOQUE CARTA -->
-  <div id="bloqueCarta">
-    <div id="estadoCarta"></div>
+  <div id="bloqueCarta" class="bloque-carta">
+    <div id="estadoCarta">Cargando...</div>
     <div id="contadorDesbloqueo"></div>
   </div>
 
@@ -27,19 +30,19 @@
   <select id="listaCartas"></select>
 
   <!-- CARTA DEL DÍA -->
-  <div id="seccionCarta" class="oculto">
-    <h2 id="numeroDia"></h2>
+  <div id="seccionCarta" class="carta oculto">
+    <div class="numero-dia" id="numeroDia"></div>
     <pre id="contenidoCarta"></pre>
   </div>
 
   <!-- CONTADOR PARA EL REENCUENTRO -->
-  <div id="contadorViaje"></div>
+  <div id="contadorViaje" class="contador-final"></div>
 
   <!-- CARRUSEL DE FOTOS -->
   <img id="imagenCarrusel" src="">
   <div class="carrusel">
-    <button onclick="anterior()">Anterior</button>
-    <button onclick="siguiente()">Siguiente</button>
+    <button onclick="anterior()">⬅️</button>
+    <button onclick="siguiente()">➡️</button>
   </div>
 
 </div>
