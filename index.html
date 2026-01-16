@@ -7,7 +7,7 @@
 </head>
 <body>
 
-<!-- LOGIN -->
+<!-- PORTADA CONTRASEÑA -->
 <div id="pantallaPassword">
   <input type="password" id="inputPassword" placeholder="Contraseña">
   <button id="btnEntrar">Entrar</button>
@@ -17,21 +17,25 @@
 <!-- CONTENIDO PRINCIPAL -->
 <div id="contenidoPrincipal" class="oculto">
 
+  <!-- BLOQUE CARTA -->
   <div id="bloqueCarta">
     <div id="estadoCarta"></div>
     <div id="contadorDesbloqueo"></div>
   </div>
 
+  <!-- SELECTOR DE CARTAS -->
   <select id="listaCartas"></select>
 
+  <!-- CARTA DEL DÍA -->
   <div id="seccionCarta" class="oculto">
     <h2 id="numeroDia"></h2>
     <pre id="contenidoCarta"></pre>
-    <video id="videoDiario" width="100%" controls></video>
   </div>
 
+  <!-- CONTADOR PARA EL REENCUENTRO -->
   <div id="contadorViaje"></div>
 
+  <!-- CARRUSEL DE FOTOS -->
   <img id="imagenCarrusel" src="">
   <div class="carrusel">
     <button onclick="anterior()">Anterior</button>
