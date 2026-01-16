@@ -176,6 +176,7 @@ El final que justifica todo el camino.`
 document.addEventListener("DOMContentLoaded", () => {
 
   const PASSWORD = "1308";
+  const FECHA_INICIO = new Date("2026-01-09T09:00:00-03:00");
   const FECHA_REENCUENTRO = new Date("2026-02-22T00:00:00-03:00");
 
   const fotos = [
@@ -192,6 +193,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const contenidoPrincipal = document.getElementById("contenidoPrincipal");
   const errorPassword = document.getElementById("errorPassword");
 
+  const bloqueCarta = document.getElementById("bloqueCarta");
+  const estadoCarta = document.getElementById("estadoCarta");
+  const contadorDesbloqueo = document.getElementById("contadorDesbloqueo");
+
   const listaCartas = document.getElementById("listaCartas");
   const seccionCarta = document.getElementById("seccionCarta");
   const numeroDia = document.getElementById("numeroDia");
@@ -200,8 +205,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const contadorViaje = document.getElementById("contadorViaje");
   const imagenCarrusel = document.getElementById("imagenCarrusel");
 
+  // LOGIN
   document.getElementById("btnEntrar").addEventListener("click", () => {
-    if (inputPassword.value !== PASSWORD) {
+    if (inputPassword.value.trim() !== PASSWORD) {
       errorPassword.innerText = "Contraseña incorrecta";
       return;
     }
@@ -212,40 +218,92 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function iniciar() {
     construirSelector();
+    actualizarEstadoCarta();
     actualizarViaje();
+    setInterval(actualizarEstadoCarta, 1000);
     setInterval(actualizarViaje, 1000);
     mostrarFoto();
   }
 
+  // =======================
+  // BLOQUEO POR FECHA
+  // =======================
+  function obtenerDiaActual() {
+    const ahora = new Date();
+    const diff = ahora - FECHA_INICIO;
+    if (diff < 0) return -1;
+    const dia = Math.floor(diff / 86400000);
+    return Math.min(dia, cartas.length - 1);
+  }
+
+  function actualizarEstadoCarta() {
+    const hoy = obtenerDiaActual();
+
+    if (hoy < 0) {
+      const restante = FECHA_INICIO - new Date();
+      estadoCarta.innerText = "La primera carta se abre en:";
+      contadorDesbloqueo.innerText = formatoTiempo(restante);
+      bloqueCarta.onclick = null;
+    } else {
+      estadoCarta.innerText = "Seleccione una carta disponible 💌";
+      contadorDesbloqueo.innerText = "";
+      bloqueCarta.onclick = () => abrirCarta(hoy);
+    }
+  }
+
   function construirSelector() {
+    const hoy = obtenerDiaActual();
     listaCartas.innerHTML = "";
+
     cartas.forEach((_, i) => {
       const opt = document.createElement("option");
       opt.value = i;
-      opt.text = `Carta ${i + 1}`;
+
+      if (i <= hoy) {
+        opt.text = `Carta ${i + 1}`;
+      } else {
+        opt.text = `🔒 Carta ${i + 1}`;
+        opt.disabled = true;
+      }
+
       listaCartas.appendChild(opt);
     });
+
     listaCartas.selectedIndex = -1;
-    listaCartas.addEventListener("change", () => abrirCarta(Number(listaCartas.value)));
+
+    listaCartas.addEventListener("change", () => {
+      abrirCarta(Number(listaCartas.value));
+    });
   }
 
   function abrirCarta(dia) {
+    const hoy = obtenerDiaActual();
+    if (dia > hoy) return;
+
     seccionCarta.classList.remove("oculto");
     numeroDia.innerText = `DÍA ${dia + 1}`;
     contenidoCarta.innerText = cartas[dia];
   }
 
+  // =======================
+  // CONTADOR REENCUENTRO
+  // =======================
   function actualizarViaje() {
     let restante = FECHA_REENCUENTRO - new Date();
     if (restante < 0) restante = 0;
+
     const s = Math.floor(restante / 1000);
     const d = Math.floor(s / 86400);
     const h = Math.floor((s % 86400) / 3600);
     const m = Math.floor((s % 3600) / 60);
     const seg = s % 60;
+
     contadorViaje.innerText = `${d}d ${h}h ${m}m ${seg}s`;
   }
 
+  // =======================
+  // CARRUSEL
+  // =======================
   function mostrarFoto() {
     imagenCarrusel.src = fotos[indiceFoto];
   }
@@ -261,4 +319,3 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
 });
-
