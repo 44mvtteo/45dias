@@ -1,43 +1,54 @@
-
 /* ===== ESTILO GENERAL ===== */
 body {
   margin: 0;
   font-family: 'Playfair Display', serif;
   background: linear-gradient(180deg,#fce4ec,#e1bee7,#e3f2fd);
   color: #222;
-  padding: 20px;
+  text-align: center;
 }
 
+/* ===== OCULTO ===== */
 .oculto { display: none; }
 
 /* ===== PORTADA CONTRASEÑA ===== */
-#pantallaPassword {
+.pantalla-password {
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
 }
 
-#pantallaPassword input {
+.password-box {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  width: 90%;
+  max-width: 320px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.password-box input {
+  width: 100%;
   padding: 10px;
-  width: 200px;
-  margin-bottom: 10px;
+  margin-top: 10px;
   border-radius: 8px;
   border: 1px solid #ccc;
 }
 
-#pantallaPassword button {
+.password-box button {
+  margin-top: 15px;
   padding: 10px 20px;
-  border-radius: 8px;
   border: none;
   background-color: #e57373;
   color: white;
+  font-weight: bold;
+  border-radius: 8px;
   cursor: pointer;
 }
 
 /* ===== BLOQUE CARTA ===== */
-#bloqueCarta {
+.bloque-carta {
   background: white;
   padding: 20px;
   border-radius: 16px;
@@ -45,14 +56,30 @@ body {
   margin: 25px auto;
   cursor: pointer;
   box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-  text-align: center;
 }
 
-#estadoCarta { font-weight: bold; margin-bottom: 8px; }
-#contadorDesbloqueo { color: #b71c1c; }
+#estadoCarta {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+#contadorDesbloqueo {
+  color: #b71c1c;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+/* ===== SELECTOR DE CARTAS ===== */
+#listaCartas {
+  display: block;
+  margin: 20px auto;
+  padding: 8px;
+  border-radius: 8px;
+  font-size: 16px;
+}
 
 /* ===== CARTA ===== */
-#seccionCarta {
+.carta {
   background: repeating-linear-gradient(
     white,
     white 26px,
@@ -66,20 +93,14 @@ body {
   box-shadow: 0 15px 30px rgba(0,0,0,0.2);
   line-height: 26px;
   position: relative;
+  text-align: left;
 }
 
-#numeroDia {
+.numero-dia {
   font-weight: bold;
   color: #b71c1c;
   margin-bottom: 10px;
-}
-
-/* ===== SELECTOR ===== */
-#listaCartas {
-  display: block;
-  margin: 20px auto;
-  padding: 8px;
-  border-radius: 8px;
+  font-size: 18px;
 }
 
 /* ===== CARRUSEL ===== */
@@ -96,6 +117,7 @@ body {
   justify-content: center;
   align-items: center;
   gap: 12px;
+  margin-bottom: 20px;
 }
 
 .carrusel button {
@@ -109,7 +131,7 @@ body {
 }
 
 /* ===== CONTADOR REENCUENTRO ===== */
-#contadorViaje {
+.contador-final {
   margin: 20px auto;
   max-width: 320px;
   background: #5a0000;
@@ -131,7 +153,8 @@ body {
   100% { transform: scale(1);   box-shadow: 0 0 8px rgba(255,0,0,0.5); }
 }
 
-/* MOBILE */
+/* ===== MOBILE ===== */
 @media (max-width: 430px) {
   body { font-size: 16px; }
+  .carta { padding: 20px 15px; }
 }
