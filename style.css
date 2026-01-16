@@ -1,23 +1,23 @@
-/* ===== GENERAL ===== */
+/* RESET BÁSICO */
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: 'Playfair Display', serif;
   background: linear-gradient(180deg,#fce4ec,#e1bee7,#e3f2fd);
   color: #222;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  text-align: center;
 }
 
-/* ===== OCULTO ===== */
-.oculto { display: none; }
+/* OCULTO */
+.oculto {
+  display: none;
+}
 
-/* ===== PANTALLA DE CONTRASEÑA ===== */
+/* LOGIN */
 .pantalla-password {
-  width: 100%;
-  height: 100%;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -25,142 +25,132 @@ body {
 
 .password-box {
   background: white;
-  padding: 40px;
+  padding: 32px;
   border-radius: 20px;
   width: 90%;
   max-width: 360px;
-  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+  box-shadow: 0 15px 30px rgba(0,0,0,.25);
+  text-align: center;
 }
 
 .password-box input {
   width: 100%;
   padding: 12px;
-  margin-top: 10px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
+  margin-top: 12px;
   font-size: 16px;
 }
 
 .password-box button {
-  margin-top: 15px;
-  padding: 12px 20px;
+  margin-top: 16px;
+  padding: 12px;
+  width: 100%;
   border: none;
-  background-color: #e57373;
+  background: #e57373;
   color: white;
   font-weight: bold;
   border-radius: 8px;
   cursor: pointer;
 }
 
-/* ===== BLOQUE CARTA ===== */
+.error {
+  margin-top: 10px;
+  color: #b71c1c;
+}
+
+/* APP */
+.app {
+  max-width: 420px;
+  margin: auto;
+  padding: 16px;
+}
+
+/* HEADER */
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* BLOQUE CARTA */
 .bloque-carta {
   background: white;
-  padding: 20px;
+  padding: 18px;
   border-radius: 16px;
-  max-width: 350px;
-  margin: 20px auto;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,.2);
 }
 
-#estadoCarta {
-  font-weight: bold;
-  font-size: 16px;
+/* SELECTOR */
+.selector {
+  margin: 16px 0;
+  text-align: center;
 }
 
-#contadorDesbloqueo {
-  color: #b71c1c;
-  font-weight: bold;
-  margin-top: 5px;
-}
-
-/* ===== SELECTOR DE CARTAS ===== */
 #listaCartas {
-  display: block;
-  margin: 15px auto;
   padding: 8px;
   border-radius: 8px;
   font-size: 16px;
-  max-width: 200px;
 }
 
-/* ===== CARTA DETALLADA ===== */
+/* CARTA */
 .carta {
   background: repeating-linear-gradient(
     white,
     white 26px,
     #ddd 27px
   );
-  max-width: 340px;
-  min-height: 300px;
-  margin: 20px auto;
-  padding: 25px 20px;
-  border-radius: 12px;
-  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
-  line-height: 26px;
-  text-align: left;
+  padding: 22px;
+  border-radius: 14px;
+  box-shadow: 0 15px 30px rgba(0,0,0,.25);
+  margin-bottom: 24px;
 }
 
 .numero-dia {
   font-weight: bold;
   color: #b71c1c;
-  font-size: 18px;
   margin-bottom: 10px;
 }
 
-/* ===== CARRUSEL ===== */
+/* CARRUSEL */
+.carrusel-section {
+  text-align: center;
+}
+
 #imagenCarrusel {
-  display: block;
-  margin: 20px auto;
-  max-width: 240px;
-  height: auto;
+  width: 100%;
+  max-width: 260px;
   border-radius: 14px;
+  margin: 12px auto;
 }
 
 .carrusel {
   display: flex;
   justify-content: center;
-  align-items: center;
-  gap: 15px;
-  margin-bottom: 20px;
+  gap: 16px;
 }
 
 .carrusel button {
-  background: #ffffffcc;
   border: none;
+  background: white;
   font-size: 22px;
-  padding: 6px 10px;
+  padding: 6px 12px;
   border-radius: 50%;
   cursor: pointer;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
-/* ===== CONTADOR REENCUENTRO ===== */
+/* CONTADOR */
 .contador-final {
-  margin: 20px auto;
-  max-width: 320px;
+  margin: 24px 0;
   background: #5a0000;
   color: #ff4d4d;
-  padding: 16px 20px;
+  padding: 14px;
   border-radius: 12px;
-  font-family: 'Courier New', monospace;
-  font-size: 18px;
   text-align: center;
-  box-shadow: 
-    0 0 8px rgba(255,0,0,0.6),
-    inset 0 0 10px rgba(255,0,0,0.4);
-  animation: pulsoAlarma 1s infinite;
+  font-family: monospace;
+  animation: pulso 1s infinite;
 }
 
-@keyframes pulsoAlarma {
-  0%   { transform: scale(1);   box-shadow: 0 0 8px rgba(255,0,0,0.5); }
-  50%  { transform: scale(1.03); box-shadow: 0 0 14px rgba(255,0,0,0.9); }
-  100% { transform: scale(1);   box-shadow: 0 0 8px rgba(255,0,0,0.5); }
-}
-
-/* ===== RESPONSIVE IPHONE 11 ===== */
-@media (max-width: 414px) {
-  body { font-size: 16px; }
-  .bloque-carta, .carta { max-width: 90%; }
-  #listaCartas { max-width: 180px; }
-  #imagenCarrusel { max-width: 200px; }
+@keyframes pulso {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.03); }
+  100% { transform: scale(1); }
 }
