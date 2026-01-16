@@ -85,10 +85,13 @@ document.addEventListener("DOMContentLoaded", () => {
       opt.disabled = i > hoy;
       listaCartas.appendChild(opt);
     });
+   listaCartas.addEventListener("change", () => {
+  abrirCarta(Number(listaCartas.value));
+});
 
-    listaCartas.onchange = () => abrirCarta(listaCartas.value);
-  }
+    listaCartas.selectedIndex = -1;
 
+ 
   function abrirCarta(dia) {
     seccionCarta.classList.remove("oculto");
     numeroDia.innerText = `DÍA ${Number(dia) + 1}`;
