@@ -8,37 +8,48 @@
 </head>
 <body>
 
+<!-- LOGIN -->
 <div id="pantallaPassword" class="pantalla-password">
   <div class="password-box">
     <h2>💌 Ingrese la contraseña 💌</h2>
     <input type="password" id="inputPassword" placeholder="Contraseña">
     <button id="btnEntrar">Entrar</button>
-    <div id="errorPassword"></div>
+    <div id="errorPassword" class="error"></div>
   </div>
 </div>
 
-<div id="contenidoPrincipal" class="oculto">
+<!-- APP -->
+<div id="contenidoPrincipal" class="oculto app">
 
-  <div id="bloqueCarta" class="bloque-carta">
-    <div id="estadoCarta">Cargando…</div>
+  <header class="header">
+    <h1>45 días con usted 💌</h1>
+  </header>
+
+  <section id="bloqueCarta" class="bloque-carta">
+    <div id="estadoCarta"></div>
     <div id="contadorDesbloqueo"></div>
-  </div>
+  </section>
 
-  <select id="listaCartas"></select>
+  <section class="selector">
+    <select id="listaCartas"></select>
+  </section>
 
-  <div id="seccionCarta" class="carta oculto">
-    <div id="numeroDia"></div>
+  <section id="seccionCarta" class="carta oculto">
+    <div id="numeroDia" class="numero-dia"></div>
     <pre id="contenidoCarta"></pre>
-  </div>
+  </section>
 
-  <div id="contadorViaje" class="contador-final"></div>
+  <section class="carrusel-section">
+    <img id="imagenCarrusel" alt="Recuerdo">
+    <div class="carrusel">
+      <button onclick="anterior()">⬅️</button>
+      <button onclick="siguiente()">➡️</button>
+    </div>
+  </section>
 
-  <img id="imagenCarrusel" alt="Recuerdo">
-
-  <div class="carrusel">
-    <button onclick="anterior()">⬅️</button>
-    <button onclick="siguiente()">➡️</button>
-  </div>
+  <footer>
+    <div id="contadorViaje" class="contador-final"></div>
+  </footer>
 
 </div>
 
