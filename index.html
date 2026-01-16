@@ -1,174 +1,211 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>45 días con usted 💌</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>45 días con usted 💌</title>
 
-<style>
-* { box-sizing: border-box; }
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-body {
-  margin: 0;
-  font-family: 'Georgia', serif;
-  background: linear-gradient(180deg,#fce4ec,#e1bee7,#e3f2fd);
-  color: #222;
-}
+    body {
+      margin: 0;
+      font-family: Georgia, serif;
+      background: linear-gradient(180deg, #fce4ec, #e1bee7, #e3f2fd);
+      color: #222;
+    }
 
-.oculto { display: none; }
+    .oculto {
+      display: none;
+    }
 
-/* LOGIN */
-.pantalla-password {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+    /* LOGIN */
+    .pantalla-password {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
-.password-box {
-  background: white;
-  padding: 32px;
-  border-radius: 20px;
-  width: 90%;
-  max-width: 360px;
-  box-shadow: 0 15px 30px rgba(0,0,0,.25);
-  text-align: center;
-}
+    .password-box {
+      background: white;
+      padding: 32px;
+      border-radius: 20px;
+      width: 90%;
+      max-width: 360px;
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+      text-align: center;
+    }
 
-.password-box input {
-  width: 100%;
-  padding: 12px;
-  margin-top: 12px;
-}
+    .password-box input {
+      width: 100%;
+      padding: 12px;
+      margin-top: 12px;
+      font-size: 16px;
+    }
 
-.password-box button {
-  margin-top: 16px;
-  padding: 12px;
-  width: 100%;
-  background: #e57373;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  font-weight: bold;
-}
+    .password-box button {
+      margin-top: 16px;
+      padding: 12px;
+      width: 100%;
+      background: #e57373;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+    }
 
-/* APP */
-.app {
-  max-width: 420px;
-  margin: auto;
-  padding: 16px;
-}
+    #errorPassword {
+      margin-top: 10px;
+      color: #b71c1c;
+      font-size: 14px;
+    }
 
-/* BLOQUE CARTA */
-.bloque-carta {
-  background: white;
-  padding: 18px;
-  border-radius: 16px;
-  text-align: center;
-  box-shadow: 0 10px 25px rgba(0,0,0,.2);
-  margin-bottom: 16px;
-}
+    /* APP */
+    .app {
+      max-width: 420px;
+      margin: auto;
+      padding: 16px;
+    }
 
-/* SELECT */
-select {
-  width: 100%;
-  padding: 10px;
-  border-radius: 8px;
-  margin-bottom: 16px;
-}
+    h1 {
+      text-align: center;
+      margin-bottom: 16px;
+    }
 
-/* CARTA */
-.carta {
-  background: repeating-linear-gradient(
-    white,
-    white 26px,
-    #ddd 27px
-  );
-  padding: 22px;
-  border-radius: 14px;
-  box-shadow: 0 15px 30px rgba(0,0,0,.25);
-  margin-bottom: 24px;
-}
+    /* BLOQUE CARTA */
+    .bloque-carta {
+      background: white;
+      padding: 18px;
+      border-radius: 16px;
+      text-align: center;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      margin-bottom: 16px;
+    }
 
-.numero-dia {
-  font-weight: bold;
-  color: #b71c1c;
-  margin-bottom: 10px;
-}
+    #estadoCarta {
+      font-weight: bold;
+    }
 
-/* CARRUSEL */
-#imagenCarrusel {
-  width: 100%;
-  max-width: 260px;
-  display: block;
-  margin: 12px auto;
-  border-radius: 14px;
-}
+    #contadorDesbloqueo {
+      margin-top: 6px;
+      color: #b71c1c;
+      font-weight: bold;
+    }
 
-.carrusel {
-  display: flex;
-  justify-content: center;
-  gap: 16px;
-}
+    /* SELECT */
+    select {
+      width: 100%;
+      padding: 10px;
+      border-radius: 8px;
+      margin-bottom: 16px;
+      font-size: 16px;
+    }
 
-/* CONTADOR */
-.contador-final {
-  margin: 24px 0;
-  background: #5a0000;
-  color: #ff4d4d;
-  padding: 14px;
-  border-radius: 12px;
-  text-align: center;
-  font-family: monospace;
-}
-</style>
+    /* CARTA */
+    .carta {
+      background: repeating-linear-gradient(
+        white,
+        white 26px,
+        #ddd 27px
+      );
+      padding: 22px;
+      border-radius: 14px;
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+      margin-bottom: 24px;
+    }
 
+    .numero-dia {
+      font-weight: bold;
+      color: #b71c1c;
+      margin-bottom: 10px;
+      text-align: left;
+    }
+
+    /* TEXTO CARTA */
+    #contenidoCarta {
+      white-space: pre-wrap;
+      overflow-wrap: break-word;
+      word-break: break-word;
+      line-height: 1.6;
+      font-size: 15px;
+    }
+
+    /* CARRUSEL */
+    #imagenCarrusel {
+      width: 100%;
+      max-width: 260px;
+      display: block;
+      margin: 12px auto;
+      border-radius: 14px;
+    }
+
+    .carrusel {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+
+    .carrusel button {
+      background: white;
+      border: none;
+      font-size: 22px;
+      padding: 6px 12px;
+      border-radius: 50%;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    /* CONTADOR */
+    .contador-final {
+      margin: 24px 0;
+      background: #5a0000;
+      color: #ff4d4d;
+      padding: 14px;
+      border-radius: 12px;
+      text-align: center;
+      font-family: monospace;
+      font-size: 16px;
+    }
+  </style>
 </head>
+
 <body>
-
-<div id="pantallaPassword" class="pantalla-password">
-  <div class="password-box">
-    <h2>💌 Ingrese la contraseña 💌</h2>
-    <input type="password" id="inputPassword" placeholder="Contraseña">
-    <button id="btnEntrar">Entrar</button>
-    <div id="errorPassword"></div>
-  </div>
-</div>
-
-<div id="contenidoPrincipal" class="oculto app">
-
-  <h1>45 días con usted 💌</h1>
-
-  <div id="bloqueCarta" class="bloque-carta">
-    <div id="estadoCarta">Cargando…</div>
-    <div id="contadorDesbloqueo"></div>
+  <!-- LOGIN -->
+  <div id="pantallaPassword" class="pantalla-password">
+    <div class="password-box">
+      <h2>💌 Ingrese la contraseña 💌</h2>
+      <input
+        type="password"
+        id="inputPassword"
+        placeholder="Contraseña"
+      />
+      <button id="btnEntrar">Entrar</button>
+      <div id="errorPassword"></div>
+    </div>
   </div>
 
-  <select id="listaCartas"></select>
+  <!-- APP -->
+  <div id="contenidoPrincipal" class="oculto app">
+    <h1>45 días con usted 💌</h1>
 
-  <div id="seccionCarta" class="carta oculto">
-    <div id="numeroDia" class="numero-dia"></div>
-    <pre id="contenidoCarta"></pre>
-  </div>
+    <div id="bloqueCarta" class="bloque-carta">
+      <div id="estadoCarta">Seleccione una carta 💌</div>
+      <div id="contadorDesbloqueo"></div>
+    </div>
 
-  <img id="imagenCarrusel" alt="Recuerdo">
+    <select id="listaCartas"></select>
 
-  <div class="carrusel">
-    <button onclick="anterior()">⬅️</button>
-    <button onclick="siguiente()">➡️</button>
-  </div>
+    <div id="seccionCarta" class="carta oculto">
+      <div id="numeroDia" class="numero-dia"></div>
+      <pre id="contenidoCarta"></pre>
+    </div>
 
-  <div id="contadorViaje" class="contador-final"></div>
+    <img id="imagenCarrusel" alt="Recuerdo" />
 
-</div>
-
-<script src="script.js"></script>
-</body>
-</html>
-
-#contenidoCarta {
-  white-space: pre-wrap;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-}
-
+    <div class="carrusel">
+      <button onc
