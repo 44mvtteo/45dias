@@ -148,8 +148,16 @@ const contadorViaje = document.getElementById("contadorViaje");
  *************************************************/
 
 function obtenerDiaActual() {
-  const diff = new Date() - FECHA_INICIO;
+  const ahora = ahoraEnChile();
+  const inicio = new Date(FECHA_INICIO);
+
+  // Normalizamos ambos a las 09:00 AM Chile
+  ahora.setHours(9, 0, 0, 0);
+  inicio.setHours(9, 0, 0, 0);
+
+  const diff = ahora - inicio;
   const dia = Math.floor(diff / 86400000);
+
   return Math.min(Math.max(dia, 0), 44);
 }
 
@@ -270,6 +278,22 @@ function siguiente() {
 function anterior() {
   indice = (indice - 1 + fotos.length) % fotos.length;
   mostrarFoto();
+}
+
+
+
+function obtenerDiaActual() {
+  const ahora = ahoraEnChile();
+  const inicio = new Date(FECHA_INICIO);
+
+  // Normalizamos ambos a las 09:00 AM Chile
+  ahora.setHours(9, 0, 0, 0);
+  inicio.setHours(9, 0, 0, 0);
+
+  const diff = ahora - inicio;
+  const dia = Math.floor(diff / 86400000);
+
+  return Math.min(Math.max(dia, 0), 44);
 }
 
 
