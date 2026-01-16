@@ -138,8 +138,7 @@ Bueno mi amor este es el dia uno de 45 dias donde mi idea era ponerle la carta e
 De verdad quiero que lo nuestro funcione, hoy, mañana y por siempre. La amo mucho mi amor espero que hoy sea un buen día en lo que se pueda y recuerde que en todo momento estaré pensandola. La amo muchísimo mi amor❤️‍🩹.
 
 9 de enero
-09:52
-`,
+09:52 `,
 
 `Dia 2
 Holaa mi vida hoy es el dia dos de 45, lee escribo esto mientras espero a bajarme del avión porque ya llegue siendo las 5:03 de la mañana hora chile peroo aca en españa son las 9 de la mañana. La extraño muchísimo no sabe cuanto la he pensado. Su carta me emociono mucho y funcionó lo que usted queria, llore y también vivi mi momento de película. No sabe la falta que me hace pero lo único que quiero es que estemos bien estos 45 dias. Lamentablemente no tengo como darle mantenimiento a la página asi que espero que cuando llegue a la casa encuentre la solución, ahora me esperan 5 horas de viaje en auto hacia sevilla y bueno quizas cuando usted lea esto yo ya estaré llegando. La amo mucho amor mio espero que este bien y espero que estemos bien, y tambien espero que me haya hablado mucho porque o si no me voy a enojarrr jejeje. La amo mucho mi amorcito 
