@@ -350,17 +350,17 @@ ABRIR CARTA
 *************************************************/
 
 function abrirCarta(dia) {
+  seccionCarta.classList.remove("oculto");
 
-seccionCarta.classList.remove("oculto");
+  // ✅ Arreglado: usar template literal con comillas invertidas
+  numeroDia.innerText = `DÍA ${Number(dia) + 1}`;
 
-numeroDia.innerText = DÍA ${Number(dia) + 1};
+  // ✅ Mostrar la carta
+  contenidoCarta.innerText = cartas[dia];
 
-contenidoCarta.innerText = cartas[dia];
-
-videoDiario.src = videos/video${Number(dia) + 1}.mp4;
-
+  // ✅ Video seguro con comillas
+  videoDiario.src = `videos/video${Number(dia) + 1}.mp4`;
 }
-
 /*************************************************
 
 CONTADOR REENCUENTRO
