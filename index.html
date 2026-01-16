@@ -2,15 +2,16 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>45 días con usted 💌</title>
 <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
 
-<!-- PORTADA CONTRASEÑA -->
+<!-- PANTALLA DE CONTRASEÑA -->
 <div id="pantallaPassword" class="pantalla-password">
   <div class="password-box">
-    <h2>Ingrese contraseña 💌</h2>
+    <h2>💌 Ingrese la contraseña 💌</h2>
     <input type="password" id="inputPassword" placeholder="Contraseña">
     <button id="btnEntrar">Entrar</button>
     <div id="errorPassword" style="color:red; margin-top:10px;"></div>
@@ -20,7 +21,7 @@
 <!-- CONTENIDO PRINCIPAL -->
 <div id="contenidoPrincipal" class="oculto">
 
-  <!-- BLOQUE CARTA -->
+  <!-- CARTA DEL DÍA -->
   <div id="bloqueCarta" class="bloque-carta">
     <div id="estadoCarta">Cargando...</div>
     <div id="contadorDesbloqueo"></div>
@@ -29,16 +30,16 @@
   <!-- SELECTOR DE CARTAS -->
   <select id="listaCartas"></select>
 
-  <!-- CARTA DEL DÍA -->
+  <!-- CARTA DETALLADA -->
   <div id="seccionCarta" class="carta oculto">
     <div class="numero-dia" id="numeroDia"></div>
     <pre id="contenidoCarta"></pre>
   </div>
 
-  <!-- CONTADOR PARA EL REENCUENTRO -->
+  <!-- CONTADOR REENCUENTRO -->
   <div id="contadorViaje" class="contador-final"></div>
 
-  <!-- CARRUSEL DE FOTOS -->
+  <!-- CARRUSEL -->
   <img id="imagenCarrusel" src="">
   <div class="carrusel">
     <button onclick="anterior()">⬅️</button>
