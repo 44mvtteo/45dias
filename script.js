@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", () => {
 
   const PASSWORD = "1308";
@@ -5,129 +6,100 @@ document.addEventListener("DOMContentLoaded", () => {
   const FECHA_REENCUENTRO = new Date("2026-02-22T00:00:00-03:00");
 
   const cartas = [
-`Dia 1
-(Tu carta real 1)`,
-`Dia 2
-(Tu carta real 2)`,
-`Dia 3
-(Tu carta real 3)`,
-`Dia 4
-(Tu carta real 4)`,
-`Dia 5
-(Tu carta real 5)`,
-`Dia 6
-Carta día 6.`,
-`Dia 7
-Carta día 7.`,
-`Dia 8
-Aquí irá la carta del día 8.`,
-`Dia 9
-Aquí irá la carta del día 9.`,
-`Dia 10
-Aquí irá la carta del día 10.`,
-`Dia 11
-Aquí irá la carta del día 11.`,
-`Dia 12
-Aquí irá la carta del día 12.`,
-`Dia 13
-Aquí irá la carta del día 13.`,
-`Dia 14
-Aquí irá la carta del día 14.`,
-`Dia 15
-Aquí irá la carta del día 15.`,
-`Dia 16
-Aquí irá la carta del día 16.`,
-`Dia 17
-Aquí irá la carta del día 17.`,
-`Dia 18
-Aquí irá la carta del día 18.`,
-`Dia 19
-Aquí irá la carta del día 19.`,
-`Dia 20
-Aquí irá la carta del día 20.`,
-`Dia 21
-Aquí irá la carta del día 21.`,
-`Dia 22
-Aquí irá la carta del día 22.`,
-`Dia 23
-Aquí irá la carta del día 23.`,
-`Dia 24
-Aquí irá la carta del día 24.`,
-`Dia 25
-Aquí irá la carta del día 25.`,
-`Dia 26
-Aquí irá la carta del día 26.`,
-`Dia 27
-Aquí irá la carta del día 27.`,
-`Dia 28
-Aquí irá la carta del día 28.`,
-`Dia 29
-Aquí irá la carta del día 29.`,
-`Dia 30
-Aquí irá la carta del día 30.`,
-`Dia 31
-Aquí irá la carta del día 31.`,
-`Dia 32
-Aquí irá la carta del día 32.`,
-`Dia 33
-Aquí irá la carta del día 33.`,
-`Dia 34
-Aquí irá la carta del día 34.`,
-`Dia 35
-Aquí irá la carta del día 35.`,
-`Dia 36
-Aquí irá la carta del día 36.`,
-`Dia 37
-Aquí irá la carta del día 37.`,
-`Dia 38
-Aquí irá la carta del día 38.`,
-`Dia 39
-Aquí irá la carta del día 39.`,
-`Dia 40
-Aquí irá la carta del día 40.`,
-`Dia 41
-Aquí irá la carta del día 41.`,
-`Dia 42
-Aquí irá la carta del día 42.`,
-`Dia 43
-Aquí irá la carta del día 43.`,
-`Dia 44
-Aquí irá la carta del día 44.`,
-`Dia 45
-Este es el cierre del viaje.`
+    `Dia 1\n(Tu carta real 1)`,
+    `Dia 2\n(Tu carta real 2)`,
+    `Dia 3\n(Tu carta real 3)`,
+    `Dia 4\n(Tu carta real 4)`,
+    `Dia 5\n(Tu carta real 5)`,
+    `Carta día 6.`,
+    `Carta día 7.`,
+    `Carta día 8.`,
+    `Carta día 9.`,
+    `Carta día 10.`,
+    `Carta día 11.`,
+    `Carta día 12.`,
+    `Carta día 13.`,
+    `Carta día 14.`,
+    `Carta día 15.`,
+    `Carta día 16.`,
+    `Carta día 17.`,
+    `Carta día 18.`,
+    `Carta día 19.`,
+    `Carta día 20.`,
+    `Carta día 21.`,
+    `Carta día 22.`,
+    `Carta día 23.`,
+    `Carta día 24.`,
+    `Carta día 25.`,
+    `Carta día 26.`,
+    `Carta día 27.`,
+    `Carta día 28.`,
+    `Carta día 29.`,
+    `Carta día 30.`,
+    `Carta día 31.`,
+    `Carta día 32.`,
+    `Carta día 33.`,
+    `Carta día 34.`,
+    `Carta día 35.`,
+    `Carta día 36.`,
+    `Carta día 37.`,
+    `Carta día 38.`,
+    `Carta día 39.`,
+    `Carta día 40.`,
+    `Carta día 41.`,
+    `Carta día 42.`,
+    `Carta día 43.`,
+    `Carta día 44.`,
+    `Carta día 45. Este es el cierre del viaje.`
   ];
 
   const fotos = ["imagenes/foto1.jpg","imagenes/foto2.jpg","imagenes/foto3.jpg"];
   let indice = 0;
 
+  // DOM
   const inputPassword = document.getElementById("inputPassword");
   const pantallaPassword = document.getElementById("pantallaPassword");
   const contenidoPrincipal = document.getElementById("contenidoPrincipal");
   const errorPassword = document.getElementById("errorPassword");
+
   const bloqueCarta = document.getElementById("bloqueCarta");
   const estadoCarta = document.getElementById("estadoCarta");
   const contadorDesbloqueo = document.getElementById("contadorDesbloqueo");
+
   const listaCartas = document.getElementById("listaCartas");
   const seccionCarta = document.getElementById("seccionCarta");
   const numeroDia = document.getElementById("numeroDia");
   const contenidoCarta = document.getElementById("contenidoCarta");
-  const videoDiario = document.getElementById("videoDiario");
+
   const contadorViaje = document.getElementById("contadorViaje");
   const imagenCarrusel = document.getElementById("imagenCarrusel");
 
-  function obtenerDiaActual() {
-    const diff = new Date() - FECHA_INICIO;
-    return Math.min(Math.max(Math.floor(diff / 86400000),0),44);
-  }
+  // ===== LOGIN =====
+  document.getElementById("btnEntrar").addEventListener("click", () => {
+    if(inputPassword.value !== PASSWORD){
+      errorPassword.innerText="Contraseña incorrecta";
+      return;
+    }
+    pantallaPassword.style.display="none";
+    contenidoPrincipal.classList.remove("oculto");
+    iniciar();
+  });
 
-  function iniciar() {
+  // ===== INICIO =====
+  function iniciar(){
     construirSelector();
     actualizarCarta();
     setInterval(actualizarCarta,1000);
     mostrarFoto();
   }
 
-  function actualizarCarta() {
+  // ===== FUNCIONES CARTA =====
+  function obtenerDiaActual() {
+    const diff = new Date() - FECHA_INICIO;
+    return Math.min(Math.max(Math.floor(diff / 86400000),0),44);
+  }
+
+  function actualizarCarta(){
     const diff = FECHA_INICIO - new Date();
     if(diff>0){
       estadoCarta.innerText="La carta se abre en:";
@@ -158,9 +130,9 @@ Este es el cierre del viaje.`
     seccionCarta.classList.remove("oculto");
     numeroDia.innerText=`DÍA ${Number(dia)+1}`;
     contenidoCarta.innerText=cartas[dia];
-    videoDiario.src=`videos/video${Number(dia)+1}.mp4`;
   }
 
+  // ===== CONTADOR REENCUENTRO =====
   function actualizarViaje(){
     const s=Math.floor((FECHA_REENCUENTRO-new Date())/1000);
     const dias=Math.floor(s/86400);
@@ -170,18 +142,17 @@ Este es el cierre del viaje.`
     contadorViaje.innerText=`${dias}d ${horas}h ${minutos}m ${segundos}s`;
   }
 
-  function mostrarFoto(){ imagenCarrusel.src=fotos[indice]; }
-  window.siguiente=function(){ indice=(indice+1)%fotos.length; mostrarFoto(); }
-  window.anterior=function(){ indice=(indice-1+fotos.length)%fotos.length; mostrarFoto(); }
-
-  document.getElementById("btnEntrar").addEventListener("click", () => {
-    if(inputPassword.value !== PASSWORD){
-      errorPassword.innerText="Contraseña incorrecta";
-      return;
-    }
-    pantallaPassword.style.display="none";
-    contenidoPrincipal.classList.remove("oculto");
-    iniciar();
-  });
+  // ===== CARRUSEL =====
+  function mostrarFoto(){
+    imagenCarrusel.src=fotos[indice];
+  }
+  window.siguiente=function(){
+    indice=(indice+1)%fotos.length;
+    mostrarFoto();
+  }
+  window.anterior=function(){
+    indice=(indice-1+fotos.length)%fotos.length;
+    mostrarFoto();
+  }
 
 });
