@@ -1,4 +1,3 @@
-
 document.addEventListener("DOMContentLoaded", () => {
 
   const PASSWORD = "1308";
@@ -93,7 +92,6 @@ document.addEventListener("DOMContentLoaded", () => {
     mostrarFoto();
   }
 
-  // ===== FUNCIONES CARTA =====
   function obtenerDiaActual() {
     const diff = new Date() - FECHA_INICIO;
     return Math.min(Math.max(Math.floor(diff / 86400000),0),44);
@@ -132,7 +130,6 @@ document.addEventListener("DOMContentLoaded", () => {
     contenidoCarta.innerText=cartas[dia];
   }
 
-  // ===== CONTADOR REENCUENTRO =====
   function actualizarViaje(){
     const s=Math.floor((FECHA_REENCUENTRO-new Date())/1000);
     const dias=Math.floor(s/86400);
@@ -142,7 +139,6 @@ document.addEventListener("DOMContentLoaded", () => {
     contadorViaje.innerText=`${dias}d ${horas}h ${minutos}m ${segundos}s`;
   }
 
-  // ===== CARRUSEL =====
   function mostrarFoto(){
     imagenCarrusel.src=fotos[indice];
   }
