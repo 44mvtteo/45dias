@@ -1,56 +1,43 @@
+
+/* ===== ESTILO GENERAL ===== */
 body {
   margin: 0;
   font-family: 'Playfair Display', serif;
   background: linear-gradient(180deg,#fce4ec,#e1bee7,#e3f2fd);
   color: #222;
+  padding: 20px;
 }
 
-.oculto {
-  display: none;
-}
+.oculto { display: none; }
 
-/* PASSWORD */
-.pantalla-password {
+/* ===== PORTADA CONTRASEÑA ===== */
+#pantallaPassword {
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
-.password-box {
-  background: white;
-  padding: 40px;
-  border-radius: 20px;
-  text-align: center;
-  width: 90%;
-  max-width: 320px;
-  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
-}
-
-.password-box input {
-  width: 100%;
+#pantallaPassword input {
   padding: 10px;
-  margin-top: 10px;
+  width: 200px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
 }
 
-.password-box button {
-  margin-top: 15px;
+#pantallaPassword button {
   padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  background-color: #e57373;
+  color: white;
   cursor: pointer;
 }
 
-/* PORTADA */
-.portada {
-  text-align: center;
-  padding: 40px 20px;
-}
-
-.titulo {
-  font-size: 2.2em;
-}
-
-/* BLOQUE CARTA */
-.bloque-carta {
+/* ===== BLOQUE CARTA ===== */
+#bloqueCarta {
   background: white;
   padding: 20px;
   border-radius: 16px;
@@ -58,81 +45,47 @@ body {
   margin: 25px auto;
   cursor: pointer;
   box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  text-align: center;
 }
 
-/* CARTA */
-.carta {
+#estadoCarta { font-weight: bold; margin-bottom: 8px; }
+#contadorDesbloqueo { color: #b71c1c; }
+
+/* ===== CARTA ===== */
+#seccionCarta {
   background: repeating-linear-gradient(
     white,
     white 26px,
     #ddd 27px
   );
   max-width: 340px;
-  min-height: 520px;
+  min-height: 320px;
   margin: 30px auto;
-  padding: 50px 35px;
+  padding: 30px 20px;
   border-radius: 12px;
   box-shadow: 0 15px 30px rgba(0,0,0,0.2);
-  line-height: 27px;
+  line-height: 26px;
   position: relative;
 }
 
-.carta::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 45px;
-  width: 2px;
-  height: 100%;
-  background: #e57373;
-}
-
-.carta p {
-  white-space: pre-line;
-}
-
-.numero-dia {
-  position: absolute;
-  top: 20px;
-  left: 15px;
-  font-size: 14px;
+#numeroDia {
   font-weight: bold;
   color: #b71c1c;
-  writing-mode: vertical-rl;
-  opacity: 0.8;
+  margin-bottom: 10px;
 }
 
-/* MOBILE */
-@media (max-width: 430px) {
-  body {
-    font-size: 16px;
-  }
+/* ===== SELECTOR ===== */
+#listaCartas {
+  display: block;
+  margin: 20px auto;
+  padding: 8px;
+  border-radius: 8px;
 }
 
-.contador-final {
-  margin: 50px auto 30px;
-  max-width: 320px;
-  background: #5a0000;
-  color: #ff4d4d;
-  padding: 16px 20px;
-  border-radius: 12px;
-  font-family: 'Courier New', monospace;
-  font-size: 18px;
-  text-align: center;
-  box-shadow: 
-    0 0 8px rgba(255,0,0,0.6),
-    inset 0 0 10px rgba(255,0,0,0.4);
-  animation: pulsoAlarma 1s infinite;
-}
-
-@keyframes pulsoAlarma {
-  0%   { transform: scale(1);   box-shadow: 0 0 8px rgba(255,0,0,0.5); }
-  50%  { transform: scale(1.03); box-shadow: 0 0 14px rgba(255,0,0,0.9); }
-  100% { transform: scale(1);   box-shadow: 0 0 8px rgba(255,0,0,0.5); }
-}
-
-.carrusel img {
-  width: 100%;
+/* ===== CARRUSEL ===== */
+#imagenCarrusel {
+  display: block;
+  margin: 20px auto;
   max-width: 240px;
   height: auto;
   border-radius: 14px;
@@ -155,8 +108,30 @@ body {
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
-section {
-  padding: 20px 16px;
+/* ===== CONTADOR REENCUENTRO ===== */
+#contadorViaje {
+  margin: 20px auto;
+  max-width: 320px;
+  background: #5a0000;
+  color: #ff4d4d;
+  padding: 16px 20px;
+  border-radius: 12px;
+  font-family: 'Courier New', monospace;
+  font-size: 18px;
+  text-align: center;
+  box-shadow: 
+    0 0 8px rgba(255,0,0,0.6),
+    inset 0 0 10px rgba(255,0,0,0.4);
+  animation: pulsoAlarma 1s infinite;
 }
 
+@keyframes pulsoAlarma {
+  0%   { transform: scale(1);   box-shadow: 0 0 8px rgba(255,0,0,0.5); }
+  50%  { transform: scale(1.03); box-shadow: 0 0 14px rgba(255,0,0,0.9); }
+  100% { transform: scale(1);   box-shadow: 0 0 8px rgba(255,0,0,0.5); }
+}
 
+/* MOBILE */
+@media (max-width: 430px) {
+  body { font-size: 16px; }
+}
