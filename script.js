@@ -62,16 +62,6 @@ Holaa mi amor hoy es el dia 6 de 45, me desperte muy contento, soñé con usted,
 14 de enero
 6:44 (hora chile)
 
-
-
-
-
-
-
-
-
-
-
 `,
   `Dia 7
 Buenos días mi amor hoy es el dia 7 y siendo las 9 y cuarto vengo a escribirle la carta. Siento que estamos mejor pero aun asi faltan cosas por hablar, se que quiere arreglar las cosas y dejar de estar mal pero no sabe el miedo constante que tengo  dia a dia de que me termine, eso pienso cada dia y no quiero que sea asi, no quiero perderla y siempre elegiré el camino del diálogo con usted. Me hace mucha falta y solo quiero un abrazo de usted, solo quiero que arreglemos lo nuestro y hagamos todo lo que queríamos, perdón por mis malas actitudes, se que he reaccionado mal y dejaran de ser asi las cosas. Haría todo por usted eso téngalo claro y yo solo quiero cuidar lo nuestro porque la amo mucho y no quiero perderla. Se que a lo mejor estamos mejor que ayer en la noche pero el sueño me dejo muy mal sinceramente, y no puedo nisiquiera imaginar volver a estar sin usted. Arreglemos bien las cosas y en persona ya las arreglamos del todo, no nos perdamos y seamos felices mutuamente. La amo muchísimo mi amor hoy mañana
