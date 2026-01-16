@@ -4,10 +4,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const FECHA_INICIO = new Date("2026-01-09T09:00:00-03:00");
   const FECHA_REENCUENTRO = new Date("2026-02-22T00:00:00-03:00");
 
-  const cartas = Array.from({ length: 45 }, (_, i) =>
-    `Día ${i + 1}\n\n(Este es el contenido real de tu carta ${i + 1})`
-  );
-
   const fotos = [
     "imagenes/foto1.jpg",
     "imagenes/foto2.jpg",
