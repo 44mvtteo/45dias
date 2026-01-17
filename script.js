@@ -55,8 +55,13 @@ Buen dia amorcito mio, hoy es el dia 8 de 45, me encuentro en moron de la fronte
 16 de enero
 08:43`,
 
-`Día 9
-Contenido de la carta 9.`,
+`Dia 9
+Buenoos diaaas mi amor hoy es el dia 9 de 45, me encuentro en el sotano escuchando a la banda de mi prima, salude al terry, conocí al raul y al marc el pololo del terry.
+Hoy mi tio va a hacer asado y van a venir los que le dije. La extraño mucho mi amor, mientras mas dias pasan, mucha mas falta me hace y solo pienso en volver a estar en sus brazos y darle besitos y cariñitos y wenu me da un poquito de penita pensar en eso porque de verdad me hace falta pero cuando la vea le daré un abrazo muy fuerte que le van a doler los huesos jejeje, espero que usted este durmiendo bien, que este soñando conmigo bonito y que prontito me hable.
+A lo mejor hoy vamos al karting pero no es seguro, yo le propuse la idea a mi tio pero como hoy esta la banda de mi prima y luego el asado nose si vamos a poder. Ya he sacado videitos de como tocan para mandárselas y cuando despierte le mandare fotitos miash y reels jejejeje. Espero que hoy no le duela la watita o que sea muy poquito o si no mandare un mensaje místico para que le deje de doler a mi amorcito (hagase un aguita de manzanilla) hoy me tome una leche con chocolate pero sin pan, nose porque creo que me dio flojera mascar JAJAJAJAJA. Y eso mi amorcito hablamos cuando despierte le dare muchito amorrr. La amo mucho wawi hemoshaaa hoy, mañana y po shiempre, beshitossss💕
+
+17 de enero
+08:26`,
 
 `Día 10
 Contenido de la carta 10.`,
