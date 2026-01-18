@@ -63,8 +63,11 @@ A lo mejor hoy vamos al karting pero no es seguro, yo le propuse la idea a mi ti
 17 de enero
 08:26`,
 
-`Día 10
-Contenido de la carta 10.`,
+`Dia 10
+Bueno mi amorcito ahora quedan 35 dias para vernos siendo el dia 10 hoy le escribo esta carta a las 6 y media de la mañana, justo rato después de que nos dijimos buenas noches y se pregunta que porque no me he ido a dormir y la respuesta es que tengo sueño pero quiero escribir esto justo ahora y aquí estoy. Peliamos y según usted ya estamos bien pero esta cansada y le creo pero igual lo pongo en duda, disculpe por el mal rato que le hice pasar, no quiero ser un estrés más para usted y por eso le pido perdon, se que no he actuado bien y espero que realmente nos hayamos arreglado para mañana. La extraño muchísimo y cuando peleamos la extraño aun mas, me hace falta su calor, su olor, que me haga cariñito me hace tanta falta pero mire hemos pasado nuestros primeros 10 días que yo siento que la velocidad aca es muy rápida porque me despierto y me duermo altiro asi todos los dias. Recuerde que la amo muchísimo y que mi intención siempre sera arreglar las cosas. Me esta dando tutito asi que me ire a soñar con usted como se debe. Espero que este durmiendo bien amor mio la amo muchísimo y que sueñe bonito.  La amo mucho mi wawi hemosha, hoy, mañana y shiempre♾️❤️‍🩹
+
+18 de enero
+02:41`,
 
 `Día 11
 Contenido de la carta 11.`,
