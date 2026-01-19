@@ -74,8 +74,7 @@ Buenos diaaas mi bebita bonita le escribo esto mientras voy llegando al gym. Hoy
 Espero que este durmiendo bonito bonito y rico y eso pue la amo mucho mi bebita bonita beshitos beshitos la amo muchoo hoy, mañana y siempree♾️❤️‍🩹
 
 19 de enero
-09:08
-`,
+09:08 `,
 
 `Día 12
 Contenido de la carta 12.`,
