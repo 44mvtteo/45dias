@@ -69,8 +69,13 @@ Bueno mi amorcito ahora quedan 35 dias para vernos siendo el dia 10 hoy le escri
 18 de enero
 02:41`,
 
-`Día 11
-Contenido de la carta 11.`,
+`Dia 11
+Buenos diaaas mi bebita bonita le escribo esto mientras voy llegando al gym. Hoy hare pecho, espalda y brazos y espero no quedar muerto. Me duele la espalda y el cuello asi que supongo que dormí todo torcido y tengo un sueño terrible pero no me impolta poque hable con usteeed. La extraño mucho mi amorcito ya estoy dentro del gimnasio y me vine al baño para hacer pis y para terminar de escribir la carta, hoy nose que mas haremos pero algo me dice que sera un dia aburrido. Ya quiero que despierte mi amorcito la extraño muchisimo, recuerde que hoy empieza con la caja nueva de pastillas, igual se lo voy a recordar a la horita que sea. Ya me voy a calentar mi amorcitooo 
+Espero que este durmiendo bonito bonito y rico y eso pue la amo mucho mi bebita bonita beshitos beshitos la amo muchoo hoy, mañana y siempree♾️❤️‍🩹
+
+19 de enero
+09:08
+`,
 
 `Día 12
 Contenido de la carta 12.`,
