@@ -86,8 +86,8 @@ Buenos dias mi amor, hoy me desperte temprano, porque tenemos gimnasio a las 12 
 `Dia 14
 Espero que siga leyendo estas cartas, porque yo las seguiré escribiendo para usted. Creo que ahora estamos peor de lo que ya estábamos (emocionalmente) y no la culpo, no me enojo, y si ayer reaccione enojado disculpeme, solo no me gusto el cambio repentino pero lo acepto y lo entiendo, y si es lo mejor para ambos, entonces hagamos bien las cosas. Ayer dormimos en llamada aunque yo no dure mucho lamentablemente, me dormí y mi celular se descargo, estaba muy cansado, el gimnasio me dejo mal y bueno solo me dormí, no lo tenía enchufado y tenía muy poca carga y ahora escribo eso a las 6 con 10%. Me da miedo que esto no funcione pero espero que si, la amo mucho, no quiero perderla, no quiero olvidarla, y no conoceré a nadie mas, porque solo quiero que sea usted la mujer que me bese, que me abrace, que me toque, que me de su cariño, sus detalles y que me diga lo mucho que me ama. Espero que esto funcione y que volvamos a estar bien, perdon por quedarme dormido pero nos pudimos ver o no?. La amo mucho, hoy mañana y siempre❤️. `,
 
-`Día 15
-Contenido de la carta 15.`,
+`Dia 15
+Buenos dias mi amor, hoy desperte con ánimos, con ganas y todo gracias a usted. No sabe lo bien que la pase hablando con usted por chat y por llamada y no sabe lo mucho que me emociono lo que dijo, que siempre seremos pareja, eso calmo tantos miedos en mi y siento ahora que de verdad esta "ruptura" va a funcionar, por usted, por mi y nuestro futuro soñado, se que lo podemos lograr, con amor y paciencia. Cada dia la extraño mas, pero su misma compañía es lo que me mantiene fuerte, lo que me hace soportar su ausencia, pero aun asi me hacen falta mil abrazos suyos, mil besos suyos y mil mas. El tiempo ha pasado rápido pero el sentimiento de extrañarla pesa demasiado. Espero que hoy sea un buen día para ambos, lleno de risas, amor y cariño. Yo estoy tomando desayuno y luego me meteré a bañar, ya quiero que se despierte y me hableee. Bueno mi amor espero su mensaje, la amo mucho mi amor hoy mañana y siempre, porque siempre lo seremos💕💕. `,
 
 `Día 16
 Contenido de la carta 16.`,
