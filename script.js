@@ -91,7 +91,7 @@ Buenos dias mi amor, hoy desperte con ánimos, con ganas y todo gracias a usted.
 
 `Dia 16
 Dia 16 y nose porque sigo escribiendo esto, solo se que va desde el corazon, las lea o no ahi estaran. Si hubiera alguna cosa para cambiar el final de las cosas, simplemente habria hecho que no tuviera final, no queria esto para nosotros pero nos consumió, nos gano y perdimos. Me quedo con los mejores recuerdos de usted, me dio la oportunidad que tanto soñé y siempre agradeceré eso. La amo de pies a cabeza, la amo de mi manera mas pura y real, la amo de la forma mas bonita que pueda existir, pero a pesar de todo el amor, nada asegura que sea perfecto. Me duele decir adiós, me duele ver que viva su vida, porque yo no quiero vivir la mia pero somos personas diferentes verdad? No fui perfecto, no pude ser el hombre que merece, pero di todo lo que mas pude por usted, asi que si alguna vez se vuelve a enamorar, que sea de alguien que valga la pena y que la ame y le demuestre mucho mas que yo, quizas tarde en encontrar alguien asi o a lo mejor siempre seré yo, porque para mi nunca habrá nadie mejor que usted. Nose que nos depare el futuro, pero espero que estemos bien o que usted este bien, con eso podre estar en paz. Espero que tenga un buen dia y no olvide que la amo mucho bonita
-Por siempre❤️‍🩹. `,
+Por siempre❤️‍🩹.`,
 
 `Día 17
 Contenido de la carta 17.`,
