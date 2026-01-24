@@ -89,8 +89,9 @@ Espero que siga leyendo estas cartas, porque yo las seguiré escribiendo para us
 `Dia 15
 Buenos dias mi amor, hoy desperte con ánimos, con ganas y todo gracias a usted. No sabe lo bien que la pase hablando con usted por chat y por llamada y no sabe lo mucho que me emociono lo que dijo, que siempre seremos pareja, eso calmo tantos miedos en mi y siento ahora que de verdad esta "ruptura" va a funcionar, por usted, por mi y nuestro futuro soñado, se que lo podemos lograr, con amor y paciencia. Cada dia la extraño mas, pero su misma compañía es lo que me mantiene fuerte, lo que me hace soportar su ausencia, pero aun asi me hacen falta mil abrazos suyos, mil besos suyos y mil mas. El tiempo ha pasado rápido pero el sentimiento de extrañarla pesa demasiado. Espero que hoy sea un buen día para ambos, lleno de risas, amor y cariño. Yo estoy tomando desayuno y luego me meteré a bañar, ya quiero que se despierte y me hableee. Bueno mi amor espero su mensaje, la amo mucho mi amor hoy mañana y siempre,porque siempre lo seremos💕💕. `,
 
-`Día 16
-Contenido de la carta 16.`,
+`Dia 16
+Dia 16 y nose porque sigo escribiendo esto, solo se que va desde el corazon, las lea o no ahi estaran. Si hubiera alguna cosa para cambiar el final de las cosas, simplemente habria hecho que no tuviera final, no queria esto para nosotros pero nos consumió, nos gano y perdimos. Me quedo con los mejores recuerdos de usted, me dio la oportunidad que tanto soñé y siempre agradeceré eso. La amo de pies a cabeza, la amo de mi manera mas pura y real, la amo de la forma mas bonita que pueda existir, pero a pesar de todo el amor, nada asegura que sea perfecto. Me duele decir adiós, me duele ver que viva su vida, porque yo no quiero vivir la mia pero somos personas diferentes verdad? No fui perfecto, no pude ser el hombre que merece, pero di todo lo que mas pude por usted, asi que si alguna vez se vuelve a enamorar, que sea de alguien que valga la pena y que la ame y le demuestre mucho mas que yo, quizas tarde en encontrar alguien asi o a lo mejor siempre seré yo, porque para mi nunca habrá nadie mejor que usted. Nose que nos depare el futuro, pero espero que estemos bien o que usted este bien, con eso podre estar en paz. Espero que tenga un buen dia y no olvide que la amo mucho bonita
+Por siempre❤️‍🩹. `,
 
 `Día 17
 Contenido de la carta 17.`,
