@@ -101,8 +101,7 @@ Buenos dias chikitita, me encuentro en el trono mientras escribo esto, estaba ra
 La amo mucho❤️.`,
 
 `Dia 19
-Estamos peor que ayer, por culpa de que yo me enoje y bueno, ya nose que mas esperanzas me quedan, nose que mas fe me queda, cada vez me convenzo mas de que no quiere nada conmigo, que ya me supero. Es terrible estar asi pero ambos sabemos que es culpa de los dos. Esta enojada y lo entiendo pero, decirme que yo se arrepiente de estar conmigo?, decirme que de arrepiente de su primera vez? Creo que eso será lo mas doloroso que me dira. Porque no puede recordarme como alguien bueno para usted?, porque ahora soy la mierda mas grande del mundo y usted solo me tira mierda?, yo no debi salir, pero usted cada dia la caga mas. Yo no soy mal hombre, ni mala persona, lo di todo por usted y no me arrepiento, sus comentarios me parten el alma, y espero creer que solo son de enojada. Porfavor espero que algún dia vuelva a mi, y poder hablar con la keyla que yo lastime.
-La amo mucho, por siempre❤️‍🩹.`,
+Estamos peor que ayer, por culpa de que yo me enoje y bueno, ya nose que mas esperanzas me quedan, nose que mas fe me queda, cada vez me convenzo mas de que no quiere nada conmigo, que ya me supero. Es terrible estar asi pero ambos sabemos que es culpa de los dos. Esta enojada y lo entiendo pero, decirme que yo se arrepiente de estar conmigo?, decirme que de arrepiente de su primera vez? Creo que eso será lo mas doloroso que me dira. Porque no puede recordarme como alguien bueno para usted?, porque ahora soy la mierda mas grande del mundo y usted solo me tira mierda?, yo no debi salir, pero usted cada dia la caga mas. Yo no soy mal hombre, ni mala persona, lo di todo por usted y no me arrepiento, sus comentarios me parten el alma, y espero creer que solo son de enojada. Porfavor espero que algún dia vuelva a mi, y poder hablar con la keyla que yo lastime.La amo mucho, por siempre❤️‍🩹.`,
 
 `Día 20
 Contenido de la carta 20.`,
