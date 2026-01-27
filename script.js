@@ -100,8 +100,9 @@ Como bien dije, seguiré escribiendo las cartas aunque no las lea. Me ha costado
 Buenos dias chikitita, me encuentro en el trono mientras escribo esto, estaba raja durmiendo y bueno ahora estoy con la raja cagando. Me deja mas tranquilo que hayamos hablado las cosas, me da miedo que cambie de opinión, que conozca mas gente o que se olvide de mi, esto no va a ser fácil pero si ambos queremos de verdad, vamos a poder y yo lo se. Quiero que ambos estemos bien con el otro, y que realmente podamos dejar el pasado atrás, seria lo mejor para ambos si volvemos. Ambos nos hemos lastimado mucho pero es decisión nuestra seguir o parar y hacer las cosas bien, yo eligo la segunda opción, quiero que hagamos las cosas bien y podamos de a poco ir solucionando esto. Me alegra que haya decidido quedarse, y me sorprende a la vez, estaba actuando desde el enojo pero sonaba tan real, pero bueno gracias a Dios no fueron asi las cosas y ahora estamos partiendo lentito para hacer las cosas bien. Esa era la carta en la mañana cuando estabamos bien, ahora ya me mando a la xuxa para siempre,
 La amo mucho❤️.`,
 
-`Día 19
-Contenido de la carta 19.`,
+`Dia 19
+Estamos peor que ayer, por culpa de que yo me enoje y bueno, ya nose que mas esperanzas me quedan, nose que mas fe me queda, cada vez me convenzo mas de que no quiere nada conmigo, que ya me supero. Es terrible estar asi pero ambos sabemos que es culpa de los dos. Esta enojada y lo entiendo pero, decirme que yo se arrepiente de estar conmigo?, decirme que de arrepiente de su primera vez? Creo que eso será lo mas doloroso que me dira. Porque no puede recordarme como alguien bueno para usted?, porque ahora soy la mierda mas grande del mundo y usted solo me tira mierda?, yo no debi salir, pero usted cada dia la caga mas. Yo no soy mal hombre, ni mala persona, lo di todo por usted y no me arrepiento, sus comentarios me parten el alma, y espero creer que solo son de enojada. Porfavor espero que algún dia vuelva a mi, y poder hablar con la keyla que yo lastime.
+La amo mucho, por siempre.`,
 
 `Día 20
 Contenido de la carta 20.`,
