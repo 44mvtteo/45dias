@@ -104,8 +104,8 @@ La amo mucho❤️.`,
 Estamos peor que ayer, por culpa de que yo me enoje y bueno, ya nose que mas esperanzas me quedan, nose que mas fe me queda, cada vez me convenzo mas de que no quiere nada conmigo, que ya me supero. Es terrible estar asi pero ambos sabemos que es culpa de los dos. Esta enojada y lo entiendo pero, decirme que yo se arrepiente de estar conmigo?, decirme que de arrepiente de su primera vez? Creo que eso será lo mas doloroso que me dira. Porque no puede recordarme como alguien bueno para usted?, porque ahora soy la mierda mas grande del mundo y usted solo me tira mierda?, yo no debi salir, pero usted cada dia la caga mas. Yo no soy mal hombre, ni mala persona, lo di todo por usted y no me arrepiento, sus comentarios me parten el alma, y espero creer que solo son de enojada. Porfavor espero que algún dia vuelva a mi, y poder hablar con la keyla que yo lastime.La amo mucho, 
 por siempre❤️‍🩹.`,
 
-`Día 20
-Contenido de la carta 20.`,
+`Dia 20
+Soy un hombre de palabra aunque haya rompido dos promesas, por eso te seguiré escribiendo las cartas. Desperte mal, desorientado, no podia moverme veía solo sombras, me fui a bañar con los ojos cerrados, y me costo despertar. Has dado vueltas en mi cabeza todo el dia, quiero perdonarte y volverlo a intentar, pero no puedo permitir una cosa asi tampoco, tengo tantas preguntas ahora mismo y incluso me llegas a dar pena porque estabas curada y todo pero aun asi lo hiciste me partiste el corazon y lo sabes muy bien. Espero que lleguemos a algo, pero hoy no tengo ganas de nada, tus amigas estan siendo participe de nuestro final real y no te importa. Esta parte de la carta la escribí temprano, mucho antes de conversar tranquilamente y llegar a lo que llegamos, podria modificarla pero mejor no. Realmente quiero que cuando vuelva las cosas funcionen y que ambos nos pongamos enfocados en el otro si es que no es problema para ti, incluso sin ser nada, mantengamos esa exclusividad, aunque ya lo rompiste confio en que no lo volverás a hacer. Te amo mucho keyla porfavor no me decepciones mas, te quiero en mi vida y no como mi ex.`,
 
 `Día 21
 Contenido de la carta 21.`,
