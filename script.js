@@ -115,7 +115,11 @@ No terminamos nuestra conversación,me dejaste el visto y te fuiste asi que espe
 te quiero mucho❤️ .`,
 
 `Día 23
-Contenido de la carta 23.`,
+hola, esta es la carta del dia 23, escribo esto para que sepas que te amo, no tengo celular hasta el lunes y bueno eso.
+me haces mucha falta, espero que cumplas lo que dijiste porque mientras menos hablamos, mas quiero arreglar las cosas y volver.
+se que por ahí debe estar la niña hermosa que tarde tanto en enamorar, espero que cuando vuelva no sea tarde, y sigas dipuesta a mi, 
+con ganas de mi, y con un cálido abrazo recibiéndome, estoy bien y espero que tu también lo estes, porfavor cumple lo que dijiste, sigues
+siendo la mujer de mis ojos y la mujer con la que quiero una vida entera. te amo mucho Keyla.`,
 
 `Día 24
 Contenido de la carta 24.`,
