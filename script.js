@@ -128,9 +128,9 @@ ensayo. Para que mentirte, ha sido un dia deprimente, anoche vi una pelicula que
 ahora ve el diario de una pasión y se que no te gusta esa pelicula pero es lo mas cercano a nuestra situación o nose. 
 Espero que estes bien, comiendo bien y cuidándote y cumpliendo lo que dijiste de no interactuar de ninguna manera con otro
 hombre. cada dia estoy mas alejado de mi celular pero se que aunque lo desee, no hay ningún mensaje tuyo pero bueno. Espero
-que esto realmente tenga solución, es lo que mas quiero, recordar los lindos recuerdos cada vez es mas doloroso pero aun asi
+que esto realmente tenga solución,es lo que mas quiero, recordar los lindos recuerdos cada vez es mas doloroso pero aun asi
 los viviría mil veces mas a tu lado. sigues siendo la mujer de mis ojos que me tiene locamente enamorado, espero que para ti 
-sea igual o algún dia lo vuelva a ser. te amo mucho Keyla.`,
+sea igual o algún dia lo vuelva a ser.te amo mucho Keyla.`,
 
 `Día 25
 Contenido de la carta 25.`,
