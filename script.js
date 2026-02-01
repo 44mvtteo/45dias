@@ -121,7 +121,7 @@ se que por ahí debe estar la niña hermosa que tarde tanto en enamorar, espero 
 con ganas de mi, y con un cálido abrazo recibiéndome, estoy bien y espero que tu también lo estes, porfavor cumple lo que dijiste, sigues
 siendo la mujer de mis ojos y la mujer con la que quiero una vida entera. te amo mucho Keyla.`,
 
-`Dia 24
+`Día 24
 esta es la carta numero 24, y si te preguntas desde donde escribo pues del computador y me meto específicamente
 a hacer esto, escribir estas cartas que quizás ni lees. hoy estuvo la banda de la sofia, la pasamos bien pero no fue tanto
 ensayo. Para que mentirte, ha sido un dia deprimente, anoche vi una pelicula que se llama efecto mariposa y me dejo mal,
